@@ -134,12 +134,34 @@ If we write $m_i=\lambda f_i+Mg_i$, it is easy to prove that $sgn(g_i)=(-1)^{i+1
 \end{enumerate}
 
 \end{theorem}
+By evaluating the expressions given above, we can find: 
+$$f_3=\frac{\vec{L}^T A^{-1}\vec{b}}{1+\vec{L}^T A^{-1}\vec{v}}$$
+$$g_3=\frac{1}{1+\vec{L}^T A^{-1} \vec{v}}$$
+Additionally, we can find $f_i=-A^{-1}\vec{b}+cA^{-1}\vec{L}+f_3A^{-1}\vec{v}$ and $g_i=g_3 A^{-1}\vec{v}$
+By finding the signs of the terms of $A^{-1}\vec{v}$ we can easily find the signs of $g_i$ if the sign of $g_3$ is known. First we shall find the sign of $g_3$.
+The numerator of $g_3$ is $1$, so the sign of the denominator is the only thing determining the sign of $g_3$.
+We know that the denominator of $c$, which is $1-\vec{v}^T A^{-1}\vec{L}$ is positive which means $\vec{v}^T A^{-1}\vec{L}<1$.
+If we take the transpose of both sides of the inequality then we get: $\vec{L}^T (A^{-1})^T (\vec{v}^T)^T=-\vec{L}^T A^{-1} \vec{v}<1$ because $A$ is skew symmetric matrix. This means that $\vec{L}^T A^{-1} \vec{v}>-1$ and so the denominator of $g_3$ is positive meaning that $g_3$ is positive as well.
 
-\begin{theorem}
+Now we must evaluate the signs of the terms of $A^{-1}\vec{v}$. By multiplying $A^{-1}$ and $\vec{v}$, we can find:
+$$A^{-1}\vec{v}=\frac{1}{Pf(A)} \left( {\begin{array}{c}
+\frac{1}{t^2(r+1)^2}+\frac{1}{(t+2)^2(r-1)^2}-\frac{1}{4(t+1-r)^2} \\
+-\frac{1}{t^2(r+s+1)^2}-\frac{1}{t+s+2)^2(r-1)^2}+\frac{1}{(s+2)^2(t+1-r)^2} \\
+\frac{1}{(t+2)^2(r+s+1)^2}-\frac{1}{(t+s+2)^2(r+1)^2}-\frac{1}{s^2)t+1-r)^2} \\
+-\frac{1}{4(r+s+1)^2}+\frac{1}{(s+2)^2(r+1)^2}+\frac{1}{s^2(r-1)^2} \\
+\end{array} } \right)
+$$
+It is easy to show that the first and last terms of this vector are positive after making some simple observations. Because, by our original statement of the equations, $-1<r<1$, we know that $0<(r-1)^2<4$ and $0<(r+1)^2<4$. Additionally, we must show that $Pf(A)$ is always positive so we can disregard it when checking the signs. We know from its definition that $Pf(A)=\frac{1}{s^2}\frac{1}{t^2}-\frac{1}{(s+2)^2}\frac{1}{(t+2)^2}+\frac{1}{(t+s+2)^2}\frac{1}{4}$. This is definitely positive because $\frac{1}{s^2}\frac{1}{t^2}-\frac{1}{(s+2)^2}\frac{1}{(t+2)^2}>0$ when $s,t>0$.
 
-\end{theorem}
+The first term of the vector is $\frac{1}{t^2(r+1)^2}+\frac{1}{(t+2)^2(r-1)^2}-\frac{1}{4(t+1-r)^2}$ and we will compare the size of the first and last term of that sum. The denominator of the first fraction must always be between $4t^2$ and $0$ depending on $r$ while the denominator of the third fraction must be between $4t^2$ and $4(t+1)^2$ and so $\frac{1}{t^2(r+1)^2}-\frac{1}{4(t+1-r)^2}>0$.
+This means the first term of the vector is always positive meaning $g_1>0$
+By a similar argument you can prove the same about the fourth term of the vector, which corresponds to $g_5>0$
 
-\section{General Case}
+It is slightly more complicated to prove that the second and third terms are negative. To prove this for the third term, we will look at the sum of $\frac{1}{(t+2)^2(r+s+1)^2}$ and $-\frac{1}{s^2(t+1-r)^2}$. First, we will take $r=-1$. This gives $\frac{1}{(t+2)^2)s^2}-\frac{1}{s^2(t+2)^2}=0$. Then, as $r$ is increased, the denominator of the positive term increases and the denominator of the negative term decreases. This means that for all $-1<r<1$, and $s,t>0$ the third term of the vector $A^{-1}\vec{v}$ is negative, which means that $g_4<0$. By a similar argument you can prove the same statement for the second term of this vector, which corresponds to $g_2<0$.
+
+This proves that, as stated above, $sgn(g_i)=(-1)^{i+1}$.
+
+\section{General Equations}
 In this section, we find regions where $m_1$, $m_2$, $m_3$, $m_4$, and $m_5$ are all positive. We will analyze each mass individually. We use the following equation to get an equation for each mass:
 \begin{equation}\newline\sum\limits_{j=1j\neq i}^n \frac{m_j(\vec{q_j}-\vec{q_i})}{\abs(\vec{q_j}-\vec{q_i})^3}=-\lambda(\vec{q_i}-\vec{c}),  i=1,2,....,n
 \end{equation}
@@ -159,12 +181,91 @@ $m_4$: $\frac{-m_1}{(s+1)^2} - \frac{m_2}{2^2} - \frac{m_3}{(r-1)^2} + 0 + \frac
 
 $m_5$: $\frac{-m_1}{(t+s+2)^2} - \frac{m_2}{(2+t)^2} - \frac{m_3}{(t+1-r)^2} - \frac{m_4}{t^2} + 0 = -\lambda(t) -\lambda + \lambda(c)$
 
+\hspace{3cm}
+
+To find expressions for $m_1,m_2,m_4,m_5$, we use Gaussian elimination in an augmented matrix. In order to ensure we did not divide by zero in any step, we checked to ensure that the denominator $d\neq0$. Since $s>0$ and $t>0$, $(s+2)^2(s+t)^2>s^2t^2$. Therefore, $d(s)>0$.
+
+\begin{equation}\begin{array}{l}
+m_{1}=[(f_{1L}(s,t)+f_{1c}(s,t)c)\lambda+g_{13}(r,s,t)m_{3}]s^{2} \\
+m_{2}=[[f_{2}(s,t)+f_{2c}(s,t)c]\lambda+g_{23}(r,s,t)m_{3}]s^{2}  \\
+m_{4}=\frac{[f_{4L}(s,t)+f_{4c}c]\lambda+g_{43}(r,s,t)m_{3}}{d}4t^{2}(s+2)^{2} \\
+m_{5}=\frac{[f_{5L}(s)+f_{5c}(s)c]\lambda+g_{53}(r,s)m_{3}}{d}t^{2}(t+2)^{2}(s+t+2)^{2} \\
+f_{1L}(s,t)=\frac{t^{2}[(s+2)^{2}(t+2)^{2}[s^{2}+(t+1)(s+t+2)^{2}]-4(s+t+2)^{2}[(s+2)^{2}+s^{2}]]}{d}-1\\
+f_{1c}(s,t)=\frac{t^{2}[(s+2)^{2}[(s^{2}(t+2)^{2}+4(s+t+2)^{2}]-(s+t+2)^{2}[(s+2)^{2}(t+2)^{2}+4s^{2}]]}{d}-1\\
+g_{13}(r,s,t)=\frac{1}{(1+r)^{2}}+\frac{t^{2}}{d}[\frac{4(s+2)^{2}(s+t+2)^{2}}{(1-r)^{2}}+\frac{4s^{2}(s+t+2)^{2}}{(1+r)^{2}}
+-\frac{(s+2)^{2}(t+2)^{2}(s+t+2)^{2}}{(1+t-r)^{2}}-\frac{s^{2}(s+2)^{2}(t+2)^{2}}{(1+r)^{2}}]\\
+f_{2L}(s,t)=1+s+\frac{t^{2}[4s^{2}(s+t+2)^{2}(1+s)+4(s+2)^{2}(t+2)^{2}-(t+2)^{2}[s^{2}(1+s)(s+2)^{2}+4(t+1)(s+t+2)^{2}]}{d}\\
+f_{2c}(s,t)=\frac{t^{2}[4(s+t+2)^{2}[s^{2}+(t+2)^{2}]-(s+2)^{2}(t+2)^{2}(4+s^{2})]}{d}+1\\
+g_{23}(r,s,t)=\frac{t^{2}}{d}[\frac{4(t+2)^{2}(s+t+2)^{2}}{(1+t-r)^{2}}+\frac{s^{2}(s+2)^{2}(t+2)^{2}}{(r+1+s)^{2}}
+-\frac{4(s+2)^{2}(t+2)^{2}}{(1-r)^{2}}-\frac{4s^{2}(s+t+2)^{2}}{(r+1+s)^{2}}]-\frac{1}{(r+1+s)^{2}}\\
+f_{4L}(s,t)=(t+2)^{2}[(t+1)(s+t+2)^{2}+s^{2}]-s^{2}(s+t+2)^{2}(1+s)\\
+f_{4c}(s,t)=s^{2}(t+2)^{2}-(s+t+2)^{2}[(t+2)^{2}+s^{2}]\\
+g_{43}(r,s,t)=\frac{s^{2}(s+t+2)^{2}}{(r+1+s)^{2}}-(t+2)^{2}[\frac{(s+t+2)^{2}}{(1+t-r)^{2}}+\frac{s^{2}}{(1+r)^{2}}]\\
+f_{5L}(s)=s^{2}(1+s)(s+2)^{2}-4(s+2)^{2}-4s^{2}\\
+f_{5c}(s)=s^{2}(s+2)^{2}+4(s+2)^{2}-4s^{2}\\
+g_{53}(s,t)=\frac{4(s+2)^{2}}{(1-r)^{2}}+\frac{4s^{2}}{(1+r)^{2}}-\frac{s^{2}(s+2)^{2}}{(r+1+s)^{2}}\\
+d(s,t)=(s+2)^{2}(t+2)^{2}s^{2}t^{2}+4(s+t+2)^{2}[(s+2)^{2}(t+2)^{2}-s^{2}t^{2}]
+\end{array}
+\end{equation}
+
+To satisfy the equation for $m_3$, we substitute our expressions for $m_1,m_2,m_4,m_5$ to obtain our c. Through this process, we discover that center of mass did not rely on $m_1, m_2, m_3, m_4, m_5, or \lambda$, but that it relies only on the parameters r, s, and t.
+
+\begin{equation}
+c(s,t,r)=\frac{s^{2}[\frac{f_{1L}}{(r+s+1)^{2}}+\frac{f_{2L}}{(r+1)^{2}}]-\frac{t^{2}}{d}[\frac{f_{4L}4(s+2)^{2}}{(r-1)^{2}}+\frac{f_{5L}(t+2)^{2}(s+t+2)^{2}}{(t+1-r)^{2}}]-r}{\frac{t^{2}}{d}[\frac{f_{4c}4(s+2)^{2}}{(r-1)^{2}}+\frac{f_{5c}(t+2)^{2}(s+t+2)^{2}}{(t+1-r)^{2}}]-s^{2}[\frac{f_{1c}}{(r+s+1)^{2}}+\frac{f_{2c}}{(r+1)^{2}}]-1}
+\end{equation}
+
  \hspace{3cm}
  
+ To generate equations in terms of the total mass, $M$, we substitute our expressions for $m_1,m_2,m_4,m_5$ into the equation for total mass and solve for $m_3$. We then substitute this expression for $m_3$ into the equations for $m_1,m_2,m_4,m_5$ to get them in the form $f_iL+g_iM$.
+\begin{equation}\begin{array}{l}
+M=f_{3L}\lambda+\frac{m_{3}}{g_{3}} \\
+$where:$\\ 
+f_{3L}=s^{2}(f_{1L}+f_{2L})+\frac{t^{2}}{d}[4(s+2)^{2}f_{4L}+\gamma_{5}f_{5L}] \\
+g_{3}(r,s,t)=\frac{1}{s^{2}(g_{13}+g_{23})+\frac{t^{2}}{d(s,t)}[4(s+2)^{2}g_{43}+\gamma_{5}g_{53}]+1} \\
+\gamma_{5}=(t+2)^{2}(s+t+2)^{2}
+\end{array}
+\end{equation} 
+
+\begin{equation}\begin{array}{l}
+m_{1}=f_{1}(r,s,t)\lambda+g_{1}(r,s,t)M \\
+m_{2}=f_{2}(r,s,t)\lambda+g_{2}(r,s,t)M \\
+m_{3}=f_{3}(r,s,t)\lambda+g_{3}(r,s,t)M \\
+m_{4}=f_{4}(r,s,t)\lambda+g_{4}(r,s,t)M \\
+m_{5}=f_{5}(r,s,t)\lambda+g_{5}(r,s,t)M \\
+$where:$ \\
+f_{1}(r,s,t)=[f_{1L}(s,t)-f_{3}(r,s,t)g_{1}(r,s,t)+f_{1c}(s,t)c(r,s,t)]s^{2} \\
+g_{1}(r,s,t)=g_{13}(r,s,t)g_{3}(r,s,t)s^{2} \\
+f_{2}(r,s,t)=[f_{2L}(s,t)-f_{3}(s,t)g_{23}(r,s,t)+f_{2c}(r,s,t)c]s^{2} \\
+g_{2}(r,s,t)=g_{23}(r,s,t)g_{3}(r,s,t)s^{2} \\
+f_{3}(r,s,t)=f_{3L}g_{3} \\
+f_{4}(r,s,t)=[\frac{f_{4L}(s,t)}{d(s,t)}-\frac{g_{43}(r,s,t)f_{3}(r,s,t)}{d(s,t)}+\frac{f_{4c}(s,t)}{d(s,t)}c(r,s,t)]4t^{2}(s+2)^{2} \\
+f_{5}=[\frac{f_{5L}(s)}{d(s,t)}-\frac{g_{53}(r,s)f_{3}(r,s,t)}{d(s,t)}+\frac{f_{5c}(s)}{d(s,t)}c(r,s,t)]\gamma_{5}t^{2} \\
+g_{5}=\frac{g_{53}(r,s)\gamma_{5}t^{2}g_{3}(r,s,t)}{d(s,t)} \\
+\end{array}
+\end{equation}
+
 
 
 \section{Symmetric Case}
-In the special case, when s=t, and r=0, we learned that the center of mass did not rely on $m_1, m_2, m_3, m_4, m_5, or \lambda$, but that it relies only on the parameters r, s, and t.  
+
+\begin{theorem}\label{thm5}
+
+\emph{Let $s>0$, $\bar{s}\approx1.39681$ be the
+real positive root of $h_{2d}(s)$, and $q=(-1-s,-1,0,1,1+s)$ with
+masses $m_{3}$ and $m_{i}=(f_{iL}(s)+f_{ic}(s)c)L+f_{i3}(s)m_{3}$
+for masses $m_{1},m_{2},m_{4},m_{5}.$ Then q is a central configuration
+if}
+\begin{enumerate}
+\item \emph{$0<s<\bar{s}$ and $h_{2}(s)<\frac{\lambda}{m_{3}}<h_{1}(s)$}
+\item \emph{$s>\bar{s}$ and $\frac{\lambda}{m_{3}}>h_{1}(s)$}
+\end{enumerate}
+where $h_{1}=\frac{h_{1n}}{h_{1d}}$, $h_{2}=\frac{h_{2n}}{h_{2d}}$, \\
+$h_{1n}=s^{4}+4s^{3}+4s^{2}+16s+16$, $h_{1d}=17s^{4}+68s^{3}+100s^{2}+64s+16$, \\
+$h_{2n}(s)=7s^{4}+28s^{3}+52s^{2}+48s+16$, and $h_{2d}(s)=-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16$.
+\end{theorem}
+
+
+In the special case, when $s=t$, and $r=0$, we discover that the center of mass is 0.  
 After we took the necessary steps to reduce our equations and find our masses, we discovered that $m_1$ is equivalent to $m_5$ and $m_2$ is equivalent to $m_4$, while $m_3$ was stationary at $0$. This happened because our equations formed a skew symmetric matrix.  
 
 $m_{1}: 0 + \frac{m_2}{s^2} + \frac{m_3}{(1+s)^2} +\frac{m_4}{(2+s)^2} + \frac{m_5}{(2s+2)^2} =\lambda(s)+\lambda+\lambda(c)$
@@ -188,12 +289,7 @@ For example, if we let $s=2$, we will get the matrix (2.1), this helps to give a
 \end{array}\right)\\
 
 \end{equation}
-These results allowed us to use equations $m_4$ and $m_5$ to plug back into our equation $m_3$ to obtain our c, we chose to use $m_4$ and $m_5$ instead of $m_1$ and $m_2$ because of their simplicity.  
 
-
-
-These results helped us when we began to work on the general case where $s\neq t$ and $r\neq 0$. 
-We took our equations $1, 2, 4,$ and $5$, and plugged these into our equation 3 to get c.
 
 \hspace{3cm}
 
@@ -212,66 +308,41 @@ $m_{5}: \frac{-m_1}{(t+s+2)^2} + \frac{-m_2}{(2+t)^2} +\frac{-m_3}{(t+1-r)^2} + 
 \hspace{6cm}
 
 
-\newline The equations are the same for this case except once we get our equations we can move $m_3$ to right side of the equations and solve for c.
-
-\hspace{3cm}
-
-$m_{1}: 0 + \frac{m_2}{s^2} +\frac{m_4}{(2+s)^2} + \frac{m_5}{(t+s+2)^2} =\lambda(s)+\lambda+\lambda(c)- \frac{m_3}{(r+s+1)^2}$
-
-$m_{2}: \frac{-m_1}{s^2} + 0 +\frac{m_4}{(2)^2} + \frac{m_5}{(t+2)^2} =\lambda+\lambda(c)- \frac{m_3}{r+1}$
-
-$m_{3}: \frac{-m_1}{(r+s+1)^2} + \frac{-m_2}{(1+r)^2} +\frac{m_4}{(1-r)^2} + \frac{m_5}{(t+1-r)^2} =\lambda(c) - 0$
-
-$m_{4}: \frac{-m_1}{(s+2)^2} + \frac{-m_2}{(2)^2} + 0 + \frac{m_5}{(t)^2} =-\lambda+\lambda(c)+ \frac{m_3}{(r-1)^2} $
-
-$m_{5}: \frac{-m_1}{(t+s+2)^2} + \frac{-m_2}{(2+t)^2}+ \frac{-m_4}{(t)^2} + 0 =-\lambda(s)-\lambda+\lambda(c) + \frac{m_3}{(t+1-r)^2} $
+\newline Since $m_1=m_5$ and $m_2=m_4$, we can simplify the problem down to two equation as the same parameters that satisfy $m_1$ will satisfy $m_5$ and likewise for $m_2$ and $m_4$. We chose to use $m_4$ and $m_5$ instead of $m_1$ and $m_2$ because of their simplicity. Substituting 0 for r and s for t, we obtain the following equations.
 
 
-\fbox{\begin{minipage}[t]{1\columnwidth}%
-$m_{4}=\frac{f_{4}(s)\lambda+g_{4}(s)m_{3}}{d}4s^{2}(s+2)^{2}$
 
-$f_{4}=(s+2)^{2}[(s+1)(2s+2)^{2}+s^{2}]-s^{2}(2s+2)^{2}(1+s)$
+\begin{equation} \begin{array}{l}
+m_{4}=\frac{f_{4s}(s)\lambda+g_{4s}(s)m_{3}}{d}4s^{2}(s+2)^{2} \\
+m_{5}=\frac{f_{5s}(s)\lambda+g_{5s}(s)m_{3}}{d}s^{2}(s+2)^{2}(2s+2)^{2} \\
+f_{4s}=(s+2)^{2}[(s+1)(2s+2)^{2}+s^{2}]-s^{2}(2s+2)^{2}(1+s) \\
+g_{4s}=\frac{s^{2}(2s+2)^{2}}{(1+s)^{2}}-(s+2)^{2}[\frac{(2s+2)^{2}}{(s+1)^{2}}+s^{2}] \\
+f_{5s}=s^{2}(s+1)(s+2)^{2}-4(s+2)^{2}-4s^{2} \\
+g_{5s}=4(s+2)^{2}+4s^{2}-\frac{s^{2}(s+2)^{2}}{(s+1)^{2}} \\
+d_s(s)=(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}
+\end{array}
+\end{equation}
 
-$g_{4}=\frac{s^{2}(2s+2)^{2}}{(1+s)^{2}}-(s+2)^{2}[\frac{(2s+2)^{2}}{(s+1)^{2}}+s^{2}]$
+In order to have a central configuration, all masses must be greater than zero. Changing the equations for $m_4$ and $m_5$ give us the inequalities $h_2$ and $h_1$ respectively.  
 
-$m_{5}=\frac{f_{5}(s)\lambda+g_{5}(s)m_{3}}{d}s^{2}(s+2)^{2}(2s+2)^{2}$
+\begin{equation}\begin{array}{ll}
+h_2: & 0<\frac{[(s+2)^{2}[(s+1)(2s+2)^{2}+s^{2}]-s^{2}(2s+2)^{2}(1+s)]\lambda+[\frac{s^{2}(2s+2)^{2}}{(1+s)^{2}}-(s+2)^{2}[\frac{(2s+2)^{2}}{(s+1)^{2}}+s^{2}]m_{3}}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}4s^{2}(s+2)^{2}\\
 
-$f_{5}=s^{2}(s+1)(s+2)^{2}-4(s+2)^{2}-4s^{2}$
+h_1: & 0<\frac{[s^{2}(s+1)(s+2)^{2}-4(s+2)^{2}-4s^{2}]\lambda+[4(s+2)^{2}+4s^{2}-\frac{s^{2}(s+2)^{2}}{(s+1)^{2}}]m_{3}}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}s^{2}(s+2)^{2}(2s+2)^{2}
+\end{array}
+\end{equation}
 
-$g_{5}=4(s+2)^{2}+4s^{2}-\frac{s^{2}(s+2)^{2}}{(s+1)^{2}}$
+Since the external terms are positive, we can multiply both sides by these terms without changing the inequality.
 
-$d(s)=(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}$%
-\end{minipage}}
+\begin{equation}
+\begin{array}{ll}
+h_{2}: & \frac{[s^{2}(2s+2)^{2}(1+s)-(s+2)^{2}[(s+1)(2s+2)^{2}+s^{2}]]\lambda}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}<\frac{[\frac{s^{2}(2s+2)^{2}}{(1+s)^{2}}-(s+2)^{2}[\frac{(2s+2)^{2}}{(s+1)^{2}}+s^{2}]m_{3}}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}\\
 
-\fbox{\begin{minipage}[t]{1\columnwidth}%
-$m_{4}=\frac{[(s+2)^{2}[(s+1)(2s+2)^{2}+s^{2}]-s^{2}(2s+2)^{2}(1+s)]\lambda+[\frac{s^{2}(2s+2)^{2}}{(1+s)^{2}}-(s+2)^{2}[\frac{(2s+2)^{2}}{(s+1)^{2}}+s^{2}]m_{3}}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}4s^{2}(s+2)^{2}$
+h_{1}: & \frac{[4(s+2)^{2}+4s^{2}-s^{2}(s+1)(s+2)^{2}]\lambda}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}<\frac{[4(s+2)^{2}+4s^{2}-\frac{s^{2}(s+2)^{2}}{(s+1)^{2}}]m_{3}}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}} \\
+\end{array}
+\end{equation}
 
-$m_{5}=\frac{[s^{2}(s+1)(s+2)^{2}-4(s+2)^{2}-4s^{2}]\lambda+[4(s+2)^{2}+4s^{2}-\frac{s^{2}(s+2)^{2}}{(s+1)^{2}}]m_{3}}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}s^{2}(s+2)^{2}(2s+2)^{2}$%
-\end{minipage}}
-
-External terms are positive. We can multiply both sides by these terms
-without changing the inequality.
-
-\fbox{\begin{minipage}[t]{1\columnwidth}%
-$h_{2}:\:0<\frac{[(s+2)^{2}[(s+1)(2s+2)^{2}+s^{2}]-s^{2}(2s+2)^{2}(1+s)]\lambda+[\frac{s^{2}(2s+2)^{2}}{(1+s)^{2}}-(s+2)^{2}[\frac{(2s+2)^{2}}{(s+1)^{2}}+s^{2}]m_{3}}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}$
-
-$h_{1}:\;0<\frac{[s^{2}(s+1)(s+2)^{2}-4(s+2)^{2}-4s^{2}]\lambda+[4(s+2)^{2}+4s^{2}-\frac{s^{2}(s+2)^{2}}{(s+1)^{2}}]m_{3}}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}$%
-\end{minipage}}
-
-\fbox{\begin{minipage}[t]{1\columnwidth}%
-$h_{2}:\;-\frac{[(s+2)^{2}[(s+1)(2s+2)^{2}+s^{2}]-s^{2}(2s+2)^{2}(1+s)]\lambda}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}<\frac{[\frac{s^{2}(2s+2)^{2}}{(1+s)^{2}}-(s+2)^{2}[\frac{(2s+2)^{2}}{(s+1)^{2}}+s^{2}]m_{3}}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}$
-
-$h_{1}:\;-\frac{[s^{2}(s+1)(s+2)^{2}-4(s+2)^{2}-4s^{2}]\lambda}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}<\frac{[4(s+2)^{2}+4s^{2}-\frac{s^{2}(s+2)^{2}}{(s+1)^{2}}]m_{3}}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}$%
-\end{minipage}}
-
-\fbox{\begin{minipage}[t]{1\columnwidth}%
-$h_{2}:\;\frac{[s^{2}(2s+2)^{2}(1+s)-(s+2)^{2}[(s+1)(2s+2)^{2}+s^{2}]]\lambda}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}<\frac{[\frac{s^{2}(2s+2)^{2}}{(1+s)^{2}}-(s+2)^{2}[\frac{(2s+2)^{2}}{(s+1)^{2}}+s^{2}]m_{3}}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}$
-
-$h_{1}:\;\frac{[4(s+2)^{2}+4s^{2}-s^{2}(s+1)(s+2)^{2}]\lambda}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}<\frac{[4(s+2)^{2}+4s^{2}-\frac{s^{2}(s+2)^{2}}{(s+1)^{2}}]m_{3}}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}$%
-\end{minipage}}
-
-The $h_{1}$ denominator is always positive. We can show that if it
-is not obvious. We can multiply both sides by the denominator without
+Since $h_{1d} = 17s^{4}+68s^{3}+100s^{2}+64s+16$ is always positive, we can multiply both sides by the denominator without
 changing the inequality.
 
 \fbox{\begin{minipage}[t]{1\columnwidth}%
@@ -299,7 +370,7 @@ $h_{1}:\;[-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16]\lambda<[8s^{2}+16s+16-\frac{s^{4}+
 \end{minipage}}
 
 since $s>0$, $-17s^{4}-68s^{3}-100s^{2}-64s-16<0$, dividing by $-17s^{4}-68s^{3}-100s^{2}-64s-16$
-will flip the inequality
+will flip the inequality.
 
 $h_{1}:\;\lambda>\frac{[-16s-16-s^{4}-4s^{3}-4s^{2}]m_{3}}{-17s^{4}-68s^{3}-100s^{2}-64s-16}$
 
@@ -328,26 +399,38 @@ When $0<s<1.39681$:
 
 $h_{2}:\;\frac{\lambda}{m_{3}}<\frac{[8s^{2}+16s+16-\frac{s^{4}+4s^{3}+4s^{2}}{(s+1)^{2}}]}{-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16}$
 
-\end{enumerate}
+\begin{center}
+\begin{figure}
+\includegraphics[width=2.7in, height=2.7in]{Lm3RegionSpecialCase.png}
+ \caption{ \label{EL}  Region for $L/m_3$ in terms of s. The blue region is the area where central configurations are possible.  }
+\end{figure}
+\end{center}
 
+
+\section{General Case Centeral Configuration}
+
+\begin{theorem}\label{thm5}
+\emph{Let $0<r<1$, $s>0$, $t>0$, and $q=(-1-s,-1,r,1,1+t)$
+with masses $m_{i}=F_{i}L+G_{i}M$ respectively. Then q is a central
+configuration if $\frac{-F_{1}}{G_{1}}<\frac{M}{L}<\frac{-F_{4}}{G_{4}}$
+and for a given t, the possible configurations lie in the region under
+the implicit curve $\frac{-F_{1}}{G_{1}}=\frac{-F_{4}}{G_{4}}$ in
+regards to r and s.}
 \end{theorem}
 
-\begin{theorem}
-
-\end{theorem}
 
 \section{Permutations for Super Central Configurations}
 As the number of possible permutations of 5 masses is large, it would be better if we could eliminate some of the permutations prior to having to write them down. This can be done relatively easily and in a way that should extend to super central configurations of the collinear n-body problem. First we shall prove the following lemma in a similar manner to how it was proved in \cite{ZX3}. It is important to keep in mind that the mass distribution is entirely determined by $M, \lambda, r,s,$ and $t$; and when investigating the super central configurations, all are held fixed.
 
 \begin{lemma}
 \begin{enumerate}
-Fix $q=(-s-1, -1, r, 1, t+1)$ with $(r,s,t)\in \mathbf{R^+}^3$. Suppose $m=(m_1, m_2, m_3, m_4, m_5)\in S(q)$ and $\tau \in P(5)$. 
+Fix $q=(-s-1, -1, r, 1, t+1)$ with $(s,t)\in \mathbf{R^+}^3$ and $-1<r<1$. Suppose $m=(m_1, m_2, m_3, m_4, m_5)\in S(q)$ and $\tau \in P(5)$. 
 \item If $m(\tau)\in S(q)$ and $m_{\tau(i)}=m_i$, then $m(\tau)=m$.
 \item If $m(\tau) \in S(q)$, $m_{\tau(i)}=m_j$, and $m_{\tau(j)}=m_i$; then $m_i=m_j$.
 \end{enumerate}
 \end{lemma}
 
-\textit{Proof of Lemma 3.1}
+\textit{Proof of Lemma 4.1}
 \begin{enumerate}
 \item If $m_{\tau(i)}=m_i$ for some $i$, we can assume without loss of generality that $i=1$ which gives
 $$ m_1=\lambda f_1+M g_1=\lambda_\tau f_1+M g_1=m_{\tau(1)}$$. This, shows that $\lambda_\tau=\lambda$. We know that the mass distribution is entirely fixed for a given $r,s,t,\lambda,$ and $M$ and so if $\lambda_\tau=\lambda$ then then $m(\tau)=m$.
@@ -357,6 +440,42 @@ $$\lambda f_i +M g_i+\lambda f_j +M g_j=\lambda_\tau f_j +M g_j+\lambda_\tau f_i
 $$\lambda (f_i +f_j) +M (g_i+g_j)=\lambda_\tau (f_i+f_j)+M(g_i+g_j)$$
 Assuming $f_i+f_j \neq 0$, this gives $\lambda_\tau=\lambda$. This is a contradiction meaning our initial assumption that $\lambda_\tau \neq \lambda$ is false. By having $\lambda_\tau=\lambda$ we have that the mass distribution is entirely defined by $M, \lambda, r,s,t$ and have that $m=m(\tau)$
 \end{enumerate}
+Thus the Proof of Lemma 4.1 is complete.
+
+By using this lemma, we are able to reduce the number of cases that must be checked by hand in order to find the super central configurations. To begin with there were $5!=120$ permutations that needed to be checked. 
+However, part 1 of Lemma 4.1 allows us to remove all permutations that are not derangements; and part 2 of Lemma 4.1 allows us to remove from the list of derangements all permutations that have two masses swapping their respective locations. 
+The number of derangements of n objects is typically written as $!n$ and $!5=44$. the second part of Lemma 4.1 allows us to remove an additional ${n \choose 2} (!(n-2))$ from the derangements. 
+This leaves $!5-{5\choose 2}(!3)=24$ permutations that must be checked by hand. We will denote the permutation $(1,2,3,4,5)$ as $\tau$ and it shall not be counted among the $24$. We will have to discuss the following $24$ permutations of $5$ masses in order to find the possible super central configurations:
+
+$$ \tau_1=(2,4,1,5,3),\hspace{1cm} \tau_2=(2,5,1,3,4),\hspace{1cm} \tau_3=(2,5,4,1,3),\hspace{1cm} \tau_4=(2,3,5,1,4)$$
+$$ \tau_5=(2,3,4,5,1),\hspace{1cm} \tau_6=(2,4,5,3,1),\hspace{1cm} \tau_7=(3,1,4,5,2),\hspace{1cm} \tau_8=(3,1,5,2,4)$$
+$$ \tau_9=(3,5,2,1,4),\hspace{1cm} \tau_{10}=(3,4,5,1,2),\hspace{1cm} \tau_{11}=(3,4,2,5,1),\hspace{1cm} \tau_{12}=(3,5,4,2,1)$$
+$$ \tau_{13}=(4,1,5,3,2),\hspace{1cm} \tau_{14}=(4,1,2,5,3),\hspace{1cm} \tau_{15}=(4,5,1,2,3),\hspace{1cm} \tau_{16}=(4,3,1,5,2)$$
+$$ \tau_{17}=(4,5,2,3,1),\hspace{1cm} \tau_{18}=(4,3,5,2,1),\hspace{1cm} \tau_{19}=(5,1,2,3,4),\hspace{1cm} \tau_{20}=(5,1,4,2,3)$$
+$$ \tau_{21}=(5,3,1,2,4),\hspace{1cm} \tau_{22}=(5,4,1,3,2),\hspace{1cm} \tau_{23}=(5,4,2,1,3),\hspace{1cm} \tau_{24}=(5,3,4,1,2)$$
+
+\section{Special Cases for Super Central Configurations}
+
+Before trying to make any statements about the general super central configurations, it would be beneficial to first investigate the cases where we have some equal masses. 
+It is known that it is impossible to have $3$ or $4$ equivalent masses because both cases would violate Lemma 4.1. This leaves the case where we have $2$ equivalent masses and $3$ distinct masses; as well as the case where we have two sets of $2$ equivalent masses with only one distinct mass. 
+
+\begin{lemma}
+Fix $q=(-s-1, -1, r, 1, t+1)$ with $(s,t)\in \mathbf{R^+}^3$ and $-1<r<1$. Suppose $m=(m_1, m_2, m_3, m_4, m_5)\in S(q)$ and $\tau \in P(5)$ Furthermore, assume that $m_i=m_j$ and $m_k=m_l$ with $i\neq j\neq k\neq l$ and $1\leq i,j,k,l \leq 5$. Then we shall have $m(\tau)\notin S_m(q)$ for all $\tau$.
+\end{lemma}
+
+\textit{Proof of Lemma 5.1}
+First we shall define $a$ to be the number between 1 and 5 that is not $i,j,k,$ or $l$. We shall then assume that $\tau(a)\neq a$ because we know that that will not allow a super central configuration. Next, we shall assume without loss of generality that $\tau(i)=a$. From here there are two cases to examine. First we have the case $\tau(j)=i$ or $\tau(j)=j$; then there is also the case that $\tau(j)=k$ or $\tau(j)=l$. We will look at the first case first. 
+
+We know from lemma 4.1 that $\tau(j)=j$ will not allow for a super central configuration so it is easily removed leaving only $\tau(j)=i$. In this case we will have $m_i=m_j=m_a$ because when $m_i=m_j$ then we must also have that the two masses taking their places in the configuration are equivalent. Thus with three equivalent masses we know that $\tau(j)=i$ will not all for a super central configuration.
+
+This leaves only two more cases. By setting, $\tau(j)=k$, we get $m_a=m_k=m_l$ which gives us three equivalent masses. Finally, by assuming that $\tau(j)=l$, we get $m_a=m_k=m_l=m_{\tau(l)}$ and so we have $4$ equivalent masses. This completes the proof of Lemma 5.1.
+
+\begin{lemma}
+Fix $q=(-s-1, -1, r, 1, t+1)$ with $(s,t)\in \mathbf{R^+}^3$ and $-1<r<1$. Suppose $m=(m_1, m_2, m_3, m_4, m_5)\in S(q)$ and $\tau \in P(5)$ Furthermore, assume that $m_i=m_j$ with $i\neq j$ and $1\leq i,j \leq 5$. Then we shall have that $m(\tau) \notin S_m(q)$ for all $\tau$ if $f_i \neq f_j$.
+\end{lemma}
+
+\textit{Proof of Lemma 5.2}
+If $m_i=m_j$ then we have $\lambda f_i +Mg_i=\lambda f_j+Mg_j$. Additionally, because the two masses in the $i^{th}$ and $j^{th}$ positions must still be equal, we also have $\lambda_{\tau} f_i +Mg_i=\lambda_{\tau} f_j+Mg_j$. By subtracting the second equation from the first we get $(\lambda-\lambda_{\tau})f_i=(\lambda-\lambda_{\tau})f_j$.This is only true in two cases. Either $f_i=f_j$ and more analysis is required to see if a super central configuration exists, or $\lambda=\lambda_{\tau}$ and there is no super central configuration as shown in the previous section. This completes the proof of Lemma 5.2.
 
 
 %\section*{Acknowledgment}
@@ -370,7 +489,7 @@ for collinear central configuration, Celestial Mechanics and
 Dynamical Astronomy 77 (2000), 77--91.
 
 \bibitem{AC} Arthur Cayley, On the theory of permutants, Cambridge and Dublin Mathematical Journal VII:
-(1852) 40�51 Reprinted in Collected mathematical papers, volume 2.
+(1852) 40锟�51 Reprinted in Collected mathematical papers, volume 2.
 
 
 \bibitem{Buch} H.E. Buchanan, On certain determinants connected with a problem in Celestial Mechanics, Bull. Amer. Math. Soc. 5 (1909), 227-231.
@@ -378,7 +497,7 @@ Dynamical Astronomy 77 (2000), 77--91.
 \bibitem{EL} L. Euler, De motu rectilineo trium corporum se mutuo attahentium, Novi Comm. Acad. Sci. Imp. Petrop. 11 (1767), 144-151.
 
 \bibitem{LA} J. Lagrange,Essai sur le probl\`{e}me des trois corps. Euvres, vol. 6, Gauthier-
-Villars, Paris, 1772, pp. 272�292 % Collected works, Vol 6 (1772), 229-324.
+Villars, Paris, 1772, pp. 272锟�292 % Collected works, Vol 6 (1772), 229-324.
 
 \bibitem{LS} Y. Long and S.  Sun, Collinear Central
 Configurations and Singular Surfaces in the Mass Space, Arch.
@@ -412,11 +531,10 @@ printing 1952.
 
 \bibitem{ZX3} Z. Xie, Inverse Problem of Central Configurations and Singular Curve in the Collinear $4$-Body
   Problem,  Celestial Mechanics and Dynamical
-Astronomy 107, (2010) 353�-376.
+Astronomy 107, (2010) 353锟�-376.
 
-\bibitem{ZX5} Z. Xie, Central Configurations of the Collinear Three-body Problem and Singular Surfaces in the Mass Space. Physics Letters A, 375 (2011) 3392�-3398.
+\bibitem{ZX5} Z. Xie, Central Configurations of the Collinear Three-body Problem and Singular Surfaces in the Mass Space. Physics Letters A, 375 (2011) 3392锟�-3398.
 \bibitem{ZX6} Z. Xie, An analytical proof on certain determinants connected with the collinear central configurations in the $n$-body problem, Celestial Mechanics and Dynamical
 Astronomy 118 (2014), no. 1, 89-97.
 \end{thebibliography}
 \end{document} 
-
