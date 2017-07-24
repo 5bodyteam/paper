@@ -190,6 +190,7 @@ m_{1}=[(f_{1L}(s,t)+f_{1c}(s,t)c)\lambda+g_{13}(r,s,t)m_{3}]s^{2} \\
 m_{2}=[[f_{2}(s,t)+f_{2c}(s,t)c]\lambda+g_{23}(r,s,t)m_{3}]s^{2}  \\
 m_{4}=\frac{[f_{4L}(s,t)+f_{4c}c]\lambda+g_{43}(r,s,t)m_{3}}{d}4t^{2}(s+2)^{2} \\
 m_{5}=\frac{[f_{5L}(s)+f_{5c}(s)c]\lambda+g_{53}(r,s)m_{3}}{d}t^{2}(t+2)^{2}(s+t+2)^{2} \\
+$where$\\
 f_{1L}(s,t)=\frac{t^{2}[(s+2)^{2}(t+2)^{2}[s^{2}+(t+1)(s+t+2)^{2}]-4(s+t+2)^{2}[(s+2)^{2}+s^{2}]]}{d}-1\\
 f_{1c}(s,t)=\frac{t^{2}[(s+2)^{2}[(s^{2}(t+2)^{2}+4(s+t+2)^{2}]-(s+t+2)^{2}[(s+2)^{2}(t+2)^{2}+4s^{2}]]}{d}-1\\
 g_{13}(r,s,t)=\frac{1}{(1+r)^{2}}+\frac{t^{2}}{d}[\frac{4(s+2)^{2}(s+t+2)^{2}}{(1-r)^{2}}+\frac{4s^{2}(s+t+2)^{2}}{(1+r)^{2}}
@@ -208,7 +209,7 @@ d(s,t)=(s+2)^{2}(t+2)^{2}s^{2}t^{2}+4(s+t+2)^{2}[(s+2)^{2}(t+2)^{2}-s^{2}t^{2}]
 \end{array}
 \end{equation}
 
-To satisfy the equation for $m_3$, we substitute our expressions for $m_1,m_2,m_4,m_5$ to obtain our c. Through this process, we discover that center of mass did not rely on $m_1, m_2, m_3, m_4, m_5, or \lambda$, but that it relies only on the parameters r, s, and t.
+To satisfy the equation for $m_3$, we substitute our expressions for $m_1,m_2,m_4,m_5$ into the $m_3$ equation to obtain our c. Through this process, we discover that center of mass does not rely on $m_1, m_2, m_3, m_4, m_5, or \lambda$, but that it relies only on the parameters r, s, and t.
 
 \begin{equation}
 c(s,t,r)=\frac{s^{2}[\frac{f_{1L}}{(r+s+1)^{2}}+\frac{f_{2L}}{(r+1)^{2}}]-\frac{t^{2}}{d}[\frac{f_{4L}4(s+2)^{2}}{(r-1)^{2}}+\frac{f_{5L}(t+2)^{2}(s+t+2)^{2}}{(t+1-r)^{2}}]-r}{\frac{t^{2}}{d}[\frac{f_{4c}4(s+2)^{2}}{(r-1)^{2}}+\frac{f_{5c}(t+2)^{2}(s+t+2)^{2}}{(t+1-r)^{2}}]-s^{2}[\frac{f_{1c}}{(r+s+1)^{2}}+\frac{f_{2c}}{(r+1)^{2}}]-1}
@@ -259,7 +260,7 @@ if}
 \item \emph{$0<s<\bar{s}$ and $h_{2}(s)<\frac{\lambda}{m_{3}}<h_{1}(s)$}
 \item \emph{$s>\bar{s}$ and $\frac{\lambda}{m_{3}}>h_{1}(s)$}
 \end{enumerate}
-where $h_{1}=\frac{h_{1n}}{h_{1d}}$, $h_{2}=\frac{h_{2n}}{h_{2d}}$, \\
+where $h_{1}=\frac{h_{1n}}{h_{1d}}$, $h_{2}=\frac{h_{2n}}{h_{2d}(s+1)^{2}}$, \\
 $h_{1n}=s^{4}+4s^{3}+4s^{2}+16s+16$, $h_{1d}=17s^{4}+68s^{3}+100s^{2}+64s+16$, \\
 $h_{2n}(s)=7s^{4}+28s^{3}+52s^{2}+48s+16$, and $h_{2d}(s)=-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16$.
 \end{theorem}
@@ -332,7 +333,7 @@ h_1: & 0<\frac{[s^{2}(s+1)(s+2)^{2}-4(s+2)^{2}-4s^{2}]\lambda+[4(s+2)^{2}+4s^{2}
 \end{array}
 \end{equation}
 
-Since the external terms are positive, we can multiply both sides by these terms without changing the inequality.
+Since the external terms are positive, we can multiply both sides by these terms without changing the direction of the inequality.
 
 \begin{equation}
 \begin{array}{ll}
@@ -342,62 +343,41 @@ h_{1}: & \frac{[4(s+2)^{2}+4s^{2}-s^{2}(s+1)(s+2)^{2}]\lambda}{(s+2)^{4}[4(2s+2)
 \end{array}
 \end{equation}
 
-Since $h_{1d} = 17s^{4}+68s^{3}+100s^{2}+64s+16$ is always positive, we can multiply both sides by the denominator without
-changing the inequality.
+Since $d_s(s) = 17s^{4}+68s^{3}+100s^{2}+64s+16$ is always positive, we can multiply both sides of the inequalities by $d_s(s)$ without
+changing the direction of the inequalities.
 
-\fbox{\begin{minipage}[t]{1\columnwidth}%
-$h_{1}:\;[s^{2}(2s+2)^{2}(s+1)-(s+2)^{2}[(s+1)(2s+2)^{2}+s^{2}]]\lambda<[\frac{s^{2}(2s+2)^{2}}{(s+1)^{2}}-(s+2)^{2}[\frac{(2s+2)^{2}}{(s+1)^{2}}+s^{2}]m_{3}$
+\begin{equation}\begin{array}{ll}
+h_{2} & [-17s^{4}-68s^{3}-100s^{2}-64s-16]\lambda<[-16s-16-s^{4}-4s^{3}-4s^{2}]m_{3} \\
+h_{1} & [-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16]\lambda<[8s^{2}+16s+16-\frac{s^{4}+4s^{3}+4s^{2}}{(s+1)^{2}}]m_{3} \\
+\end{array}
+\end{equation}
 
-$h_{1}:\;[4(s+2)^{2}+4s^{2}-s^{2}(s+1)(s+2)^{2}]\lambda<[4(s+2)^{2}+4s^{2}-\frac{s^{2}(s+2)^{2}}{(s+1)^{2}}]m_{3}$%
-\end{minipage}}
-
-\fbox{\begin{minipage}[t]{1\columnwidth}%
-$h_{1}:\;[(4s^{2}+8s+4)(s^{3}+s^{2})-(s+2)^{2}[(s+1)(4s^{2}+8s+4)+s^{2}]]\lambda<[\frac{s^{2}(2s+2)^{2}}{(s+1)^{2}}-\frac{(2s+2)^{2}(s+2)^{2}}{(s+1)^{2}}-s^{2}(s+2)^{2}]m_{3}$
-
-$h_{1}:\;[4s^{2}+16s+16+4s^{2}-s^{2}(s+1)(s^{2}+4s+4)]\lambda<[8s^{2}+16s+16-\frac{s^{2}(s+2)^{2}}{(s+1)^{2}}]m_{3}$%
-\end{minipage}}
-
-\fbox{\begin{minipage}[t]{1\columnwidth}%
-$h_{1}:\;[(4s^{5}+12s^{4}+12s^{3}+4s^{2})-(s^{2}+4s+4)(4s^{3}+13s^{2}+12s+4)]\lambda<[4s^{2}-4(s+2)^{2}-s^{2}(s+2)^{2}]m_{3}$
-
-$h_{1}:\;[4s^{2}+16s+16+4s^{2}-s^{5}-5s^{4}-8s^{3}-4s^{2}]\lambda<[8s^{2}+16s+16-\frac{s^{2}(s+2)^{2}}{(s+1)^{2}}]m_{3}$%
-\end{minipage}}
-
-\fbox{\begin{minipage}[t]{1\columnwidth}%
-$h_{1}:\;[-17s^{4}-68s^{3}-100s^{2}-64s-16]\lambda<[-16s-16-s^{4}-4s^{3}-4s^{2}]m_{3}$
-
-$h_{1}:\;[-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16]\lambda<[8s^{2}+16s+16-\frac{s^{4}+4s^{3}+4s^{2}}{(s+1)^{2}}]m_{3}$%
-\end{minipage}}
-
-since $s>0$, $-17s^{4}-68s^{3}-100s^{2}-64s-16<0$, dividing by $-17s^{4}-68s^{3}-100s^{2}-64s-16$
-will flip the inequality.
+Since $s>0$, $h_{1d}(s)=-17s^{4}-68s^{3}-100s^{2}-64s-16<0$, dividing by $h_{1d}$ will flip the inequality.
 
 $h_{1}:\;\lambda>\frac{[-16s-16-s^{4}-4s^{3}-4s^{2}]m_{3}}{-17s^{4}-68s^{3}-100s^{2}-64s-16}$
 
-since $m_{3}>0$, dividing by $m_{3}$ will not change the inequality
+since $m_{3}>0$, dividing by $m_{3}$ will not change the direction of the inequality.
 
-$h_{1}:\;\frac{\lambda}{m_{3}}>\frac{-16s-16-s^{4}-4s^{3}-4s^{2}}{-17s^{4}-68s^{3}-100s^{2}-64s-16}$
 
-$h_{1}:\;\frac{\lambda}{m_{3}}>\frac{s^{4}+4s^{3}+4s^{2}+16s+16}{17s^{4}+68s^{3}+100s^{2}+64s+16}$
+\begin{equation}
+\begin(array}{ll}
 
-$h_{2}:\;[-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16]\lambda<[8s^{2}+16s+16-\frac{s^{4}+4s^{3}+4s^{2}}{(s+1)^{2}}]m_{3}$
+h_{1}: & \frac{\lambda}{m_{3}}>\frac{s^{4}+4s^{3}+4s^{2}+16s+16}{17s^{4}+68s^{3}+100s^{2}+64s+16}$
+\end{array}
+\end{equation}
 
-By Descartes Rule, $-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16$ has one positive
-real root at $\approx1.39681$.
 
-When $s>1.39681$, $-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16<0$ 
+By Descartes Rule, $h_{2d}=-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16$ has one positive real root at $\bar{s}\approx1.39681$. Therefore, we need to split $h_2$ into three cases.  When $s>\bar{s}$, $h_{2d}>0$. When $s<\bar{s}$, $h_{2d}<0$ and the inequality is flipped when we divide by $h_{2d}$. And when $s=\bar{s}$, $h_{2d}=0$ and the inequality is undefined.
 
-When $0<s<1.39681$, $-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16>0$
+When $0<s<\bar{s}$:
 
-When $s=1.39681$, $-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16=0$
+$h_{2}:\;\frac{\lambda}{m_{3}}<\frac{[8s^{2}+16s+16-\frac{s^{4}+4s^{3}+4s^{2}}{(s+1)^{2}}]}{-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16}$
 
-When $s>1.39681$:
+When $s>\bar{s}$:
 
 $h_{2}:\;\frac{\lambda}{m_{3}}>\frac{[8s^{2}+16s+16-\frac{s^{4}+4s^{3}+4s^{2}}{(s+1)^{2}}]}{-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16}$
 
-When $0<s<1.39681$:
-
-$h_{2}:\;\frac{\lambda}{m_{3}}<\frac{[8s^{2}+16s+16-\frac{s^{4}+4s^{3}+4s^{2}}{(s+1)^{2}}]}{-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16}$
+In the case that $s>\bar{s}$, $\frac{\lambda}/{m_3}$ must satisfy both $\frac{\lambda}{m_{3}}>h_{1}(s)$ and $\frac{\lambda}{m_{3}}>h_{2}(s)$. However, $h_{1} > h_2$, and therefore, it is enough to say that $\frac{\lambda}{m_{3}}>h_{1}(s)$. Since $s>0$, $h_{2n} > 0$, $h_{1n} >0$, $h_{1d}>0$, and $(s+1)^2>0$. Since $h_{2d}$ is negative and $h_{2n}$ and ${s+1}^2$ are positive, $h_{2}<0$ when $s>\bar{s}$. Since $h_{1d}$ and $h_{1n}$ are positive, $h_1>0$. Since $h_1>0$ and $0>h_2$, $h_1>h_2$ when $s>\bar{s}$.  
 
 \begin{center}
 \begin{figure}
@@ -407,7 +387,7 @@ $h_{2}:\;\frac{\lambda}{m_{3}}<\frac{[8s^{2}+16s+16-\frac{s^{4}+4s^{3}+4s^{2}}{(
 \end{center}
 
 
-\section{General Case Centeral Configuration}
+\section{R > 0 Case Centeral Configuration}
 
 \begin{theorem}\label{thm5}
 \emph{Let $0<r<1$, $s>0$, $t>0$, and $q=(-1-s,-1,r,1,1+t)$
@@ -538,3 +518,4 @@ Astronomy 107, (2010) 353�-376.
 Astronomy 118 (2014), no. 1, 89-97.
 \end{thebibliography}
 \end{document} 
+
