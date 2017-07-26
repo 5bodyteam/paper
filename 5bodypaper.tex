@@ -188,15 +188,15 @@ To find expressions for $m_1,m_2,m_4,m_5$, we use Gaussian elimination in an aug
 \begin{equation}\begin{array}{l}
 m_{1}=[(f_{1L}(s,t)+f_{1c}(s,t)c)\lambda+g_{13}(r,s,t)m_{3}]s^{2} \\
 m_{2}=[[f_{2}(s,t)+f_{2c}(s,t)c]\lambda+g_{23}(r,s,t)m_{3}]s^{2}  \\
-m_{4}=\frac{[f_{4L}(s,t)+f_{4c}c]\lambda+g_{43}(r,s,t)m_{3}}{d}4t^{2}(s+2)^{2} \\
-m_{5}=\frac{[f_{5L}(s)+f_{5c}(s)c]\lambda+g_{53}(r,s)m_{3}}{d}t^{2}(t+2)^{2}(s+t+2)^{2} \\
+m_{4}=\frac{[f_{4L}(s,t)+f_{4c}c]\lambda+g_{43}(r,s,t)m_{3}}{d(s,t)}4t^{2}(s+2)^{2} \\
+m_{5}=\frac{[f_{5L}(s)+f_{5c}(s)c]\lambda+g_{53}(r,s)m_{3}}{d(s,t)}t^{2}(t+2)^{2}(s+t+2)^{2} \\
 $where$\\
-f_{1L}(s,t)=\frac{t^{2}[(s+2)^{2}(t+2)^{2}[s^{2}+(t+1)(s+t+2)^{2}]-4(s+t+2)^{2}[(s+2)^{2}+s^{2}]]}{d}-1\\
-f_{1c}(s,t)=\frac{t^{2}[(s+2)^{2}[(s^{2}(t+2)^{2}+4(s+t+2)^{2}]-(s+t+2)^{2}[(s+2)^{2}(t+2)^{2}+4s^{2}]]}{d}-1\\
+f_{1L}(s,t)=\frac{t^{2}[(s+2)^{2}(t+2)^{2}[s^{2}+(t+1)(s+t+2)^{2}]-4(s+t+2)^{2}[(s+2)^{2}+s^{2}]]}{d(s,t)}-1\\
+f_{1c}(s,t)=\frac{t^{2}[(s+2)^{2}[(s^{2}(t+2)^{2}+4(s+t+2)^{2}]-(s+t+2)^{2}[(s+2)^{2}(t+2)^{2}+4s^{2}]]}{d(s,t)}-1\\
 g_{13}(r,s,t)=\frac{1}{(1+r)^{2}}+\frac{t^{2}}{d}[\frac{4(s+2)^{2}(s+t+2)^{2}}{(1-r)^{2}}+\frac{4s^{2}(s+t+2)^{2}}{(1+r)^{2}}
 -\frac{(s+2)^{2}(t+2)^{2}(s+t+2)^{2}}{(1+t-r)^{2}}-\frac{s^{2}(s+2)^{2}(t+2)^{2}}{(1+r)^{2}}]\\
-f_{2L}(s,t)=1+s+\frac{t^{2}[4s^{2}(s+t+2)^{2}(1+s)+4(s+2)^{2}(t+2)^{2}-(t+2)^{2}[s^{2}(1+s)(s+2)^{2}+4(t+1)(s+t+2)^{2}]}{d}\\
-f_{2c}(s,t)=\frac{t^{2}[4(s+t+2)^{2}[s^{2}+(t+2)^{2}]-(s+2)^{2}(t+2)^{2}(4+s^{2})]}{d}+1\\
+f_{2L}(s,t)=1+s+\frac{t^{2}[4s^{2}(s+t+2)^{2}(1+s)+4(s+2)^{2}(t+2)^{2}-(t+2)^{2}[s^{2}(1+s)(s+2)^{2}+4(t+1)(s+t+2)^{2}]}{d(s,t)}\\
+f_{2c}(s,t)=\frac{t^{2}[4(s+t+2)^{2}[s^{2}+(t+2)^{2}]-(s+2)^{2}(t+2)^{2}(4+s^{2})]}{d(s,t)}+1\\
 g_{23}(r,s,t)=\frac{t^{2}}{d}[\frac{4(t+2)^{2}(s+t+2)^{2}}{(1+t-r)^{2}}+\frac{s^{2}(s+2)^{2}(t+2)^{2}}{(r+1+s)^{2}}
 -\frac{4(s+2)^{2}(t+2)^{2}}{(1-r)^{2}}-\frac{4s^{2}(s+t+2)^{2}}{(r+1+s)^{2}}]-\frac{1}{(r+1+s)^{2}}\\
 f_{4L}(s,t)=(t+2)^{2}[(t+1)(s+t+2)^{2}+s^{2}]-s^{2}(s+t+2)^{2}(1+s)\\
@@ -212,7 +212,7 @@ d(s,t)=(s+2)^{2}(t+2)^{2}s^{2}t^{2}+4(s+t+2)^{2}[(s+2)^{2}(t+2)^{2}-s^{2}t^{2}]
 To satisfy the equation for $m_3$, we substitute our expressions for $m_1,m_2,m_4,m_5$ into the $m_3$ equation to obtain our c. Through this process, we discover that center of mass does not rely on $m_1, m_2, m_3, m_4, m_5, or \lambda$, but that it relies only on the parameters r, s, and t.
 
 \begin{equation}
-c(s,t,r)=\frac{s^{2}[\frac{f_{1L}}{(r+s+1)^{2}}+\frac{f_{2L}}{(r+1)^{2}}]-\frac{t^{2}}{d}[\frac{f_{4L}4(s+2)^{2}}{(r-1)^{2}}+\frac{f_{5L}(t+2)^{2}(s+t+2)^{2}}{(t+1-r)^{2}}]-r}{\frac{t^{2}}{d}[\frac{f_{4c}4(s+2)^{2}}{(r-1)^{2}}+\frac{f_{5c}(t+2)^{2}(s+t+2)^{2}}{(t+1-r)^{2}}]-s^{2}[\frac{f_{1c}}{(r+s+1)^{2}}+\frac{f_{2c}}{(r+1)^{2}}]-1}
+c(s,t,r)=\frac{s^{2}[\frac{f_{1L}(s,t)}{(r+s+1)^{2}}+\frac{f_{2L}(s,t)}{(r+1)^{2}}]-\frac{t^{2}}{d(s,t)}[\frac{f_{4L}(s,t)4(s+2)^{2}}{(r-1)^{2}}+\frac{f_{5L}(s,t)(t+2)^{2}(s+t+2)^{2}}{(t+1-r)^{2}}]-r}{\frac{t^{2}}{d(s,t)}[\frac{f_{4c}(s,t)4(s+2)^{2}}{(r-1)^{2}}+\frac{f_{5c}(s,t)(t+2)^{2}(s+t+2)^{2}}{(t+1-r)^{2}}]-s^{2}[\frac{f_{1c}(s,t)}{(r+s+1)^{2}}+\frac{f_{2c}(s,t)}{(r+1)^{2}}]-1}
 \end{equation}
 
  \hspace{3cm}
@@ -261,7 +261,7 @@ if}
 \item \emph{$s>\bar{s}$ and $\frac{\lambda}{m_{3}}>h_{1}(s)$}
 \end{enumerate}
 where $h_{1}=\frac{h_{1n}}{h_{1d}}$, $h_{2}=\frac{h_{2n}}{h_{2d}(s+1)^{2}}$, \\
-$h_{1n}=s^{4}+4s^{3}+4s^{2}+16s+16$, $h_{1d}=17s^{4}+68s^{3}+100s^{2}+64s+16$, \\
+$h_{1n}=s^{4}+4s^{3}+4s^{2}+16s+16$, $h_{1d}=17s^{4}+68s^{3}+100s^{2}+64s+16$, ]]
 $h_{2n}(s)=7s^{4}+28s^{3}+52s^{2}+48s+16$, and $h_{2d}(s)=-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16$.
 \end{theorem}
 
@@ -288,7 +288,6 @@ For example, if we let $s=2$, we will get the matrix (2.1), this helps to give a
 {\left(\begin{array}{ccccc}
 0 & \frac{1}{4} & \frac{1}{9} & \frac{1}{16} & \frac{1}{36} & \frac{-1}{4} & 0 & 1 & \frac{1}{4} & \frac{1}{16} & \frac{-1}{9} & -1 & 0 & 1 & \frac{1}{9} & \frac{-1}{16} & \frac{-1}{4} & -1 & 0 & \frac{1}{4} & \frac{-1}{36} & \frac{-1}{16} & \frac{-1}{9} & \frac{-1}{4} & 0 
 \end{array}\right)\\
-
 \end{equation}
 
 
@@ -316,6 +315,7 @@ $m_{5}: \frac{-m_1}{(t+s+2)^2} + \frac{-m_2}{(2+t)^2} +\frac{-m_3}{(t+1-r)^2} + 
 \begin{equation} \begin{array}{l}
 m_{4}=\frac{f_{4s}(s)\lambda+g_{4s}(s)m_{3}}{d}4s^{2}(s+2)^{2} \\
 m_{5}=\frac{f_{5s}(s)\lambda+g_{5s}(s)m_{3}}{d}s^{2}(s+2)^{2}(2s+2)^{2} \\
+$where:$\\
 f_{4s}=(s+2)^{2}[(s+1)(2s+2)^{2}+s^{2}]-s^{2}(2s+2)^{2}(1+s) \\
 g_{4s}=\frac{s^{2}(2s+2)^{2}}{(1+s)^{2}}-(s+2)^{2}[\frac{(2s+2)^{2}}{(s+1)^{2}}+s^{2}] \\
 f_{5s}=s^{2}(s+1)(s+2)^{2}-4(s+2)^{2}-4s^{2} \\
@@ -326,7 +326,7 @@ d_s(s)=(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}
 
 In order to have a central configuration, all masses must be greater than zero. Changing the equations for $m_4$ and $m_5$ give us the inequalities $h_2$ and $h_1$ respectively.  
 
-\begin{equation}\begin{array}{ll}
+\begin{equation} \begin{array}{ll}
 h_2: & 0<\frac{[(s+2)^{2}[(s+1)(2s+2)^{2}+s^{2}]-s^{2}(2s+2)^{2}(1+s)]\lambda+[\frac{s^{2}(2s+2)^{2}}{(1+s)^{2}}-(s+2)^{2}[\frac{(2s+2)^{2}}{(s+1)^{2}}+s^{2}]m_{3}}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}4s^{2}(s+2)^{2}\\
 
 h_1: & 0<\frac{[s^{2}(s+1)(s+2)^{2}-4(s+2)^{2}-4s^{2}]\lambda+[4(s+2)^{2}+4s^{2}-\frac{s^{2}(s+2)^{2}}{(s+1)^{2}}]m_{3}}{(s+2)^{4}[4(2s+2)^{2}+s^{4}]-4s^{4}(2s+2)^{2}}s^{2}(s+2)^{2}(2s+2)^{2}
@@ -346,23 +346,28 @@ h_{1}: & \frac{[4(s+2)^{2}+4s^{2}-s^{2}(s+1)(s+2)^{2}]\lambda}{(s+2)^{4}[4(2s+2)
 Since $d_s(s) = 17s^{4}+68s^{3}+100s^{2}+64s+16$ is always positive, we can multiply both sides of the inequalities by $d_s(s)$ without
 changing the direction of the inequalities.
 
-\begin{equation}\begin{array}{ll}
-h_{2} & [-17s^{4}-68s^{3}-100s^{2}-64s-16]\lambda<[-16s-16-s^{4}-4s^{3}-4s^{2}]m_{3} \\
-h_{1} & [-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16]\lambda<[8s^{2}+16s+16-\frac{s^{4}+4s^{3}+4s^{2}}{(s+1)^{2}}]m_{3} \\
+\begin{equation} \begin{array}{ll}
+h_{2}: & [-17s^{4}-68s^{3}-100s^{2}-64s-16]\lambda<[-16s-16-s^{4}-4s^{3}-4s^{2}]m_{3} \\
+h_{1}: & [-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16]\lambda<[8s^{2}+16s+16-\frac{s^{4}+4s^{3}+4s^{2}}{(s+1)^{2}}]m_{3} \\
 \end{array}
 \end{equation}
 
 Since $s>0$, $h_{1d}(s)=-17s^{4}-68s^{3}-100s^{2}-64s-16<0$, dividing by $h_{1d}$ will flip the inequality.
 
-$h_{1}:\;\lambda>\frac{[-16s-16-s^{4}-4s^{3}-4s^{2}]m_{3}}{-17s^{4}-68s^{3}-100s^{2}-64s-16}$
 
-since $m_{3}>0$, dividing by $m_{3}$ will not change the direction of the inequality.
+\begin{equation}
+\begin{array}{ll}
+h_{1}: & \lambda>\frac{[-16s-16-s^{4}-4s^{3}-4s^{2}]m_{3}}{-17s^{4}-68s^{3}-100s^{2}-64s-16}\\
+\end{array}
+\end{equation}
+
+Since $m_{3}>0$, dividing by $m_{3}$ will not change the direction of the inequality.
 
 
 \begin{equation}
-\begin(array}{ll}
+\begin{array}{ll}
 
-h_{1}: & \frac{\lambda}{m_{3}}>\frac{s^{4}+4s^{3}+4s^{2}+16s+16}{17s^{4}+68s^{3}+100s^{2}+64s+16}$
+h_{1}: & \frac{\lambda}{m_{3}}>\frac{s^{4}+4s^{3}+4s^{2}+16s+16}{17s^{4}+68s^{3}+100s^{2}+64s+16}\\
 \end{array}
 \end{equation}
 
@@ -377,26 +382,89 @@ When $s>\bar{s}$:
 
 $h_{2}:\;\frac{\lambda}{m_{3}}>\frac{[8s^{2}+16s+16-\frac{s^{4}+4s^{3}+4s^{2}}{(s+1)^{2}}]}{-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16}$
 
-In the case that $s>\bar{s}$, $\frac{\lambda}/{m_3}$ must satisfy both $\frac{\lambda}{m_{3}}>h_{1}(s)$ and $\frac{\lambda}{m_{3}}>h_{2}(s)$. However, $h_{1} > h_2$, and therefore, it is enough to say that $\frac{\lambda}{m_{3}}>h_{1}(s)$. Since $s>0$, $h_{2n} > 0$, $h_{1n} >0$, $h_{1d}>0$, and $(s+1)^2>0$. Since $h_{2d}$ is negative and $h_{2n}$ and ${s+1}^2$ are positive, $h_{2}<0$ when $s>\bar{s}$. Since $h_{1d}$ and $h_{1n}$ are positive, $h_1>0$. Since $h_1>0$ and $0>h_2$, $h_1>h_2$ when $s>\bar{s}$.  
+In the case that $s>\bar{s}$, $\frac{\lambda}{m_3}$ must satisfy both $\frac{\lambda}{m_{3}}>h_{1}(s)$ and $\frac{\lambda}{m_{3}}>h_{2}(s)$. However, $h_{1} > h_2$, and therefore, it is enough to say that $\frac{\lambda}{m_{3}}>h_{1}(s)$. Since $s>0$, $h_{2n} > 0$, $h_{1n} >0$, $h_{1d}>0$, and $(s+1)^2>0$. Since $h_{2d}$ is negative and $h_{2n}$ and ${s+1}^2$ are positive, $h_{2}<0$ when $s>\bar{s}$. Since $h_{1d}$ and $h_{1n}$ are positive, $h_1>0$. Since $h_1>0$ and $0>h_2$, $h_1>h_2$ when $s>\bar{s}$.  
 
 \begin{center}
 \begin{figure}
 \includegraphics[width=2.7in, height=2.7in]{Lm3RegionSpecialCase.png}
- \caption{ \label{EL}  Region for $L/m_3$ in terms of s. The blue region is the area where central configurations are possible.  }
+ \caption{ \label{EL}  Region for $\frac{\lambda}{m_3}$ in terms of s. The blue region is the area where central configurations are possible.  }
 \end{figure}
 \end{center}
 
 
-\section{R > 0 Case Centeral Configuration}
+\section{Nonzero r Case Central Configuration}
 
 \begin{theorem}\label{thm5}
-\emph{Let $0<r<1$, $s>0$, $t>0$, and $q=(-1-s,-1,r,1,1+t)$
-with masses $m_{i}=F_{i}L+G_{i}M$ respectively. Then q is a central
-configuration if $\frac{-F_{1}}{G_{1}}<\frac{M}{L}<\frac{-F_{4}}{G_{4}}$
-and for a given t, the possible configurations lie in the region under
-the implicit curve $\frac{-F_{1}}{G_{1}}=\frac{-F_{4}}{G_{4}}$ in
-regards to r and s.}
+\emph{Let $-1<r<1$, $r\neq0$, $s>0$, $t>0$, and $q=(-1-s,-1,r,1,1+t)$
+with masses $m_{i}=f_{i}\lambda+f_{i}M$ respectively. Then q is a
+central configuration if }
+\begin{enumerate}
+\item \emph{$0\< r<1$ and $\frac{-f_{1}}{g_{1}}<\frac{M}{\lambda}<\frac{-f_{4}}{g_{4}}$.
+For a given t, the possible configurations lie in the region under
+the implicit curve $\frac{-f_{1}}{g_{1}}=\frac{-f_{4}}{g_{4}}$ in
+regards to s and r.}
+\item \emph{$-1<r<0$ and $\frac{-f_{5}}{g_{5}}<\frac{M}{\lambda}<\frac{-f_{2}}{g_{2}}$.
+For a given t, the possible configurations lie in the region under
+the implicit curve $\frac{-f_{5}}{g_{5}}=\frac{-f_{2}}{g_{2}}$ in
+regards to t and r.}\end{enumerate}
 \end{theorem}
+
+In order to find determine the parameters for central configurations, we need to find where we have positive masses. For $i={1,2,...5} m_i = f_i\lambda + g_iM > 0$. Previously it was shown that $g_1 > 0, g_3 > 0, g_5 > 0, g_2 < 0, g_4 < 0$. Using this, we can rewrite the inequalities thusly: 
+
+\begin{equation} \begin{array}{ll}
+m_1: & \frac{M}{\lambda} > \frac{-f_1}{g_1} \\
+m_2: & \frac{M}{\lambda} < \frac{-f_2}{g_2} \\
+m_3: & \frac{M}{\lambda} > \frac{-f_3}{g_3} \\
+m_4: & \frac{M}{\lambda} < \frac{-f_4}{g_4} \\
+m_5: & \frac{M}{\lambda} > \frac{-f_5}{g_5} \\
+\end{array}
+\end{equation}
+
+Thus, central configurations are possible when $max(\frac{-f_1}{g_1},\frac{-f_3}{g_3},\frac{-f_5}{g_5})<\frac{M}{\lambda}<min(\frac{-f_2}{g_2},\frac{-f_4}{g_4})$. Initially, we chose a value for r and plotted the region in terms of s and t. Then, we chose a value for t and plotted the region for s and r. When we picked a value for t and plotted the region in terms of s and r, we found that the region closely approximates to a parabola. The regions appear to approach the parabola in the $t=1$ plane and then begin to decline.
+
+\begin{center}
+
+\begin{figure}
+\includegraphics[width=3.9in, height=3in]{regionsRfixed.png}
+ \caption{ \label{EL}  Plots of the regions where central configurations are possible for given values of r in terms of s and t.} 
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=6in, height=2in]{regionstLessThan1.png}
+\includegraphics[width=6in, height=2in]{regionst18.png}
+ \caption{ \label{EL}  Plots of the regions where central configurations are possible for given values of t in terms of r and s. Central configurations are possible in the regions under the curves.} 
+\end{figure}
+
+\end{center}
+
+
+Therefore, we explored the regions for $t = 1$ further. First, we plotted the implicit curves $\frac{-f_1}{g_1}=m_3,\frac{-f_1}{g_1}=-\frac{-f_5}{g_5},\frac{-f_3}{g_3}=m_5$ to outline the regions for the minimum values and $\frac{-f_2}{g_2},\frac{-f_4}{g_4}$ to outline the regions for the maximum values. Then, we looked at the regions where $\frac{-f_1}{g_1}$ is greater than both $\frac{-f_3}{g_3}$ and $m_5$ and likewise for $\frac{-f_3}{g_3}$ and $m_5$ and where $-\frac{f_2}{g_2}>m_4$ and $m_4>\frac{-f_2}{g_2}$. Next, we superimposed the regions to see what our minimums and maximums would be for each region. While we initially had five regions to consider, four regions turned out to be trivial cases where the maximum was always larger than the minimum over the entire region. The only region of interest is the $\frac{-f_1}{g_1} < \frac{-f_4}{g_4}$ region. Comparing the plot of $\frac{-f_1}{g_1} < \frac{-f_4}{g_4}$ is a close to exact match for the previous plots of the the central configuration region in the $t=1$ plane. This is also the case when we choose different values for t as well.
+
+
+
+\begin{center}
+
+\begin{figure}
+\includegraphics[width=6in, height=2in]{t1regionOutline.png}
+ \caption{ \label{EL}  Where $-\frac{F_i}{G_i}=-\frac{f_i}{g_i}$ for specified $i$ in the $t=1$ plane. Notation is simplified in the figure. For example, 1 represents $-\frac{f_1}{g_1}$.} 
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=6in, height=2in]{t1rG0region.png}
+ \caption{ \label{EL}  Conditions for central configuration for specified regions of $r$ and $s$ in the $t=1$ plane. Notation is simplified in the figure. For example, 1 represents $-\frac{f_1}{g_1}$.}
+\end{figure}
+
+\end{center}
+
+We can then rotate the configuration to look at $r<0$. When $r<0$, the configuration is the same as the $r>0$ configuration, but t and s are swapped. Also, $m1$ becomes $m5$ and $m2$ becomes $m4$. Therefore, the defining curve for $r<0$ is $-\frac{F_5}{G_5}=-\frac{F_2}{G_2}$ and $-\frac{f_5}{g_5}<\frac{M}{\lambda}<-\frac{f_2}{g_2}$ for a central configuration to exist. This can be confirmed by plotting the region for a given t.
+
+
+\begin{figure}
+\includegraphics[width=6in, height=2in]{t1rG0region.png}
+ \caption{ \label{EL}  Conditions for central configuration  when $\frac{M}{\lambda}$ for specified regions for $r$ and $s$ in the $t=1$ plane. Notation is simplified in the figure. For example, 1 represents $-\frac{F_1}{G_1}$.}
+\end{figure}
+
+\end{center}
 
 
 \section{Permutations for Super Central Configurations}
@@ -517,5 +585,4 @@ Astronomy 107, (2010) 353�-376.
 \bibitem{ZX6} Z. Xie, An analytical proof on certain determinants connected with the collinear central configurations in the $n$-body problem, Celestial Mechanics and Dynamical
 Astronomy 118 (2014), no. 1, 89-97.
 \end{thebibliography}
-\end{document} 
-
+\end{document}
