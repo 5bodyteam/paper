@@ -382,7 +382,15 @@ When $s>\bar{s}$:
 
 $h_{2}:\;\frac{\lambda}{m_{3}}>\frac{[8s^{2}+16s+16-\frac{s^{4}+4s^{3}+4s^{2}}{(s+1)^{2}}]}{-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16}$
 
-In the case that $s>\bar{s}$, $\frac{\lambda}{m_3}$ must satisfy both $\frac{\lambda}{m_{3}}>h_{1}(s)$ and $\frac{\lambda}{m_{3}}>h_{2}(s)$. However, $h_{1} > h_2$, and therefore, it is enough to say that $\frac{\lambda}{m_{3}}>h_{1}(s)$. Since $s>0$, $h_{2n} > 0$, $h_{1n} >0$, $h_{1d}>0$, and $(s+1)^2>0$. Since $h_{2d}$ is negative and $h_{2n}$ and ${s+1}^2$ are positive, $h_{2}<0$ when $s>\bar{s}$. Since $h_{1d}$ and $h_{1n}$ are positive, $h_1>0$. Since $h_1>0$ and $0>h_2$, $h_1>h_2$ when $s>\bar{s}$.  
+In the case that $s>\bar{s}$, $\frac{\lambda}{m_3}$ must satisfy both $\frac{\lambda}{m_{3}}>h_{1}(s)$ and $\frac{\lambda}{m_{3}}>h_{2}(s)$. However, $h_{1} > h_2$, and therefore, it is enough to say that $\frac{\lambda}{m_{3}}>h_{1}(s)$. Since $s>0$, $h_{2n} > 0$, $h_{1n} >0$, $h_{1d}>0$, and $(s+1)^2>0$. Since $h_{2d}$ is negative and $h_{2n}$ and ${s+1}^2$ are positive, $h_{2}<0$ when $s>\bar{s}$. Since $h_{1d}$ and $h_{1n}$ are positive, $h_1>0$. Since $h_1>0$ and $0>h_2$, $h_1>h_2$ when $s>\bar{s}$. \\
+
+If we find the difference between $h_{2}(s)$ and $h_{1}(s)$ and simplify the expression, we
+have: $$h_{2}(s)-h_{1}(s)=\frac{s^{11}+11s^{10}+51s^{9}+256s^{8}+1208s^{7}+3856s^{6}+7856s^{5}+10240s^{4}+8320s^{3}+3840s^{2}+768s}{(h_{2d}(s))(h_{1d}(s))(s+1)^{2}(-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16)}$$
+
+Since $s>0$, $s^{11}+11s^{10}+51s^{9}+256s^{8}+1208s^{7}+3856s^{6}+7856s^{5}+10240s^{4}+8320s^{3}+3840s^{2}+768s>0$,
+$h_{1d}(s)>0$, and $(s+1)^{2}>0$. Since $0<s<\bar{s}$, $h_{2d}(s)>0$.
+Therefore, $h_{2}(s)-h_{1}(s)>0.$ Therefore, we can always find positive
+masses for any value of s such that $0<s<\bar{s}$ and $s>\bar{s}$. 
 
 \begin{center}
 \begin{figure}
@@ -396,7 +404,7 @@ In the case that $s>\bar{s}$, $\frac{\lambda}{m_3}$ must satisfy both $\frac{\la
 
 \begin{theorem}\label{thm5}
 \emph{Let $-1<r<1$, $r\neq0$, $s>0$, $t>0$, and $q=(-1-s,-1,r,1,1+t)$
-with masses $m_{i}=f_{i}\lambda+f_{i}M$ respectively. Then q is a
+with masses $m_{i}=f_{i}\lambda+f_{i}M$ respectively. Then it is possible for q to be a
 central configuration if }
 \begin{enumerate}
 \item \emph{$0\< r<1$ and $\frac{-f_{1}}{g_{1}}<\frac{M}{\lambda}<\frac{-f_{4}}{g_{4}}$.
@@ -446,7 +454,7 @@ Therefore, we explored the regions for $t = 1$ further. First, we plotted the im
 
 \begin{figure}
 \includegraphics[width=6in, height=2in]{t1regionOutline.png}
- \caption{ \label{EL}  Where $-\frac{F_i}{G_i}=-\frac{f_i}{g_i}$ for specified $i$ in the $t=1$ plane. Notation is simplified in the figure. For example, 1 represents $-\frac{f_1}{g_1}$.} 
+ \caption{ \label{EL}  Where $-\frac{f_i}{g_i}=-\frac{f_i}{g_i}$ for specified $i$ in the $t=1$ plane. Notation is simplified in the figure. For example, 1 represents $-\frac{f_1}{g_1}$.} 
 \end{figure}
 
 \begin{figure}
@@ -456,15 +464,31 @@ Therefore, we explored the regions for $t = 1$ further. First, we plotted the im
 
 \end{center}
 
-We can then rotate the configuration to look at $r<0$. When $r<0$, the configuration is the same as the $r>0$ configuration, but t and s are swapped. Also, $m1$ becomes $m5$ and $m2$ becomes $m4$. Therefore, the defining curve for $r<0$ is $-\frac{F_5}{G_5}=-\frac{F_2}{G_2}$ and $-\frac{f_5}{g_5}<\frac{M}{\lambda}<-\frac{f_2}{g_2}$ for a central configuration to exist. This can be confirmed by plotting the region for a given t.
+We can then rotate the configuration to look at $r<0$. When $r<0$, the configuration is the same as the $r>0$ configuration, but t and s are swapped. Also, $m1$ becomes $m5$ and $m2$ becomes $m4$. Therefore, the defining curve for $r<0$ is $-\frac{f_5}g_5}=-\frac{f_2}{g_2}$ and $-\frac{f_5}{g_5}<\frac{M}{\lambda}<-\frac{f_2}{g_2}$ for a central configuration to exist. This can be confirmed by plotting the region for a given t.
 
 
 \begin{figure}
-\includegraphics[width=6in, height=2in]{t1rG0region.png}
- \caption{ \label{EL}  Conditions for central configuration  when $\frac{M}{\lambda}$ for specified regions for $r$ and $s$ in the $t=1$ plane. Notation is simplified in the figure. For example, 1 represents $-\frac{F_1}{G_1}$.}
+\includegraphics[width=6in, height=2in]{ict148.png}
+\includegraphics[width=6in, height=2in]{ictp1p9.png}
+ \caption{ \label{EL}  Plot of  $-\frac{f_1}{g_1} = -\frac{f_4}{g_4}$ for given values of t.}
 \end{figure}
 
 \end{center}
+
+\section{r = 0 Case Central Configurations}
+
+\begin{theorem}\label{thm5}
+\emph{Let $s>0$, $t>0$, and $q=(-1-s,-1,0,1,1+t)$
+with masses $m_{i}=f_{i}\lambda+f_{i}M$ respectively, then it is possible for q to be a
+central configuration. }
+\end{theorem}
+
+Exploring the central configurations for the $r = 0$ case using the same method as the $r > 0$ case, we can seperate the problem into six regions based on the maximum of $m_1,m_2,m_3$ and the minimum of $m_2,m_4$. If we rotate the configuration, half of these cases are identical. This can also be observed in the symmetry of the figure. If we swap the s and t axises and $f_1,g_1$ and $f_5,g_5$ and $f_2,g_2$ and $f_4,g_4$, we would have an identical graph. Therefore, we can look at three of these regions to see if $-f_5/g_5 < -f_4/g_4$, $-f_5/g_5<-f_2/g_2$, and $-f_3/g_3<-f_4/g_4$. For each of these regions, the maximum value is always larger than the minimum value. 
+
+\begin{figure}
+\includegraphics[width=6in, height=6in]{rIsZeroRegions.png}
+ \caption{ \label{EL}  Conditions for central configuration for specified regions of $r$ and $s$ in the $t=1$ plane. Notation is simplified in the figure. For example, 1 represents $-\frac{f_1}{g_1}$.}
+\end{figure}
 
 
 \section{Permutations for Super Central Configurations}
@@ -585,4 +609,4 @@ Astronomy 107, (2010) 353�-376.
 \bibitem{ZX6} Z. Xie, An analytical proof on certain determinants connected with the collinear central configurations in the $n$-body problem, Celestial Mechanics and Dynamical
 Astronomy 118 (2014), no. 1, 89-97.
 \end{thebibliography}
-\end{document}
+\end{document} 
