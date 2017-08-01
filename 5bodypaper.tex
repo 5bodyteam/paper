@@ -114,7 +114,7 @@ $$m_3=\frac{\lambda \vec{L}^TA^{-1}\vec{b}+M}{1+\vec{L}^TA^{-1}\vec{v}}$$
 
 \textcolor{red}{Prove: $c$ is well defined by showing the denominator is always bigger than 0.}\\
 The following theorems have been proved in \cite{ZX6}. 
-\begin{theorem}\label{thm5}
+\begin{theorem}\label{rn0thm}
 \begin{enumerate}
  \item The center of mass $c$ for any $5$-body collinear central configuration $x=(x_1,x_2,\cdots,x_5)^T$ only depends on the configuration $x$ and it is independent of the parameter $\lambda$ and the corresponding mass $m$. More precisely it is given by
 \begin{equation}\label{cm}
@@ -134,6 +134,7 @@ If we write $m_i=\lambda f_i+Mg_i$, it is easy to prove that $sgn(g_i)=(-1)^{i+1
 \end{enumerate}
 
 \end{theorem}
+\label{willthm}
 By evaluating the expressions given above, we can find: 
 $$f_3=\frac{\vec{L}^T A^{-1}\vec{b}}{1+\vec{L}^T A^{-1}\vec{v}}$$
 $$g_3=\frac{1}{1+\vec{L}^T A^{-1} \vec{v}}$$
@@ -249,7 +250,7 @@ g_{5}=\frac{g_{53}(r,s)\gamma_{5}t^{2}g_{3}(r,s,t)}{d(s,t)} \\
 
 \section{Symmetric Case}
 
-\begin{theorem}\label{thm5}
+\begin{theorem}
 
 \emph{Let $s>0$, $\bar{s}\approx1.39681$ be the
 real positive root of $h_{2d}(s)$, and $q=(-1-s,-1,0,1,1+s)$ with
@@ -266,7 +267,7 @@ $h_{2n}(s)=7s^{4}+28s^{3}+52s^{2}+48s+16$, and $h_{2d}(s)=-s^{5}-5s^{4}-8s^{3}+4
 \end{theorem}
 
 
-In the special case, when $s=t$, and $r=0$, we discover that the center of mass is 0.  
+In the symmetric case, when $s=t$, and $r=0$, we discover that the center of mass is 0.  
 After we took the necessary steps to reduce our equations and find our masses, we discovered that $m_1$ is equivalent to $m_5$ and $m_2$ is equivalent to $m_4$, while $m_3$ was stationary at $0$. This happened because our equations formed a skew symmetric matrix.  
 
 $m_{1}: 0 + \frac{m_2}{s^2} + \frac{m_3}{(1+s)^2} +\frac{m_4}{(2+s)^2} + \frac{m_5}{(2s+2)^2} =\lambda(s)+\lambda+\lambda(c)$
@@ -372,7 +373,7 @@ h_{1}: & \frac{\lambda}{m_{3}}>\frac{s^{4}+4s^{3}+4s^{2}+16s+16}{17s^{4}+68s^{3}
 \end{equation}
 
 
-By Descartes Rule, $h_{2d}=-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16$ has one positive real root at $\bar{s}\approx1.39681$. Therefore, we need to split $h_2$ into three cases.  When $s>\bar{s}$, $h_{2d}>0$. When $s<\bar{s}$, $h_{2d}<0$ and the inequality is flipped when we divide by $h_{2d}$. And when $s=\bar{s}$, $h_{2d}=0$ and the inequality is undefined.
+Using Descartes Rule and the intermediate theorem, we find that $h_{2d}=-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16$ has one positive real root at $\bar{s}\approx1.39681$. Therefore, we need to split $h_2$ into three cases.  When $s>\bar{s}$, $h_{2d}>0$. When $s<\bar{s}$, $h_{2d}<0$ and the inequality is flipped when we divide by $h_{2d}$. And when $s=\bar{s}$, $h_{2d}=0$ and the inequality is undefined.
 
 When $0<s<\bar{s}$:
 
@@ -390,24 +391,26 @@ have: $$h_{2}(s)-h_{1}(s)=\frac{s^{11}+11s^{10}+51s^{9}+256s^{8}+1208s^{7}+3856s
 Since $s>0$, $s^{11}+11s^{10}+51s^{9}+256s^{8}+1208s^{7}+3856s^{6}+7856s^{5}+10240s^{4}+8320s^{3}+3840s^{2}+768s>0$,
 $h_{1d}(s)>0$, and $(s+1)^{2}>0$. Since $0<s<\bar{s}$, $h_{2d}(s)>0$.
 Therefore, $h_{2}(s)-h_{1}(s)>0.$ Therefore, we can always find positive
-masses for any value of s such that $0<s<\bar{s}$ and $s>\bar{s}$. 
+masses for any value of s such that $0<s<\bar{s}$ and $s>\bar{s}$. See figure \ref{SCG1}.
 
 \begin{center}
 \begin{figure}
+\label{SCG1}
 \includegraphics[width=2.7in, height=2.7in]{Lm3RegionSpecialCase.png}
- \caption{ \label{EL}  Region for $\frac{\lambda}{m_3}$ in terms of s. The blue region is the area where central configurations are possible.  }
+ \caption{Region for $\frac{\lambda}{m_3}$ in terms of s. The blue region is the area where central configurations are possible.  }
 \end{figure}
 \end{center}
 
 
 \section{Nonzero r Case Central Configuration}
 
-\begin{theorem}\label{thm5}
+\begin{theorem}
+\label{thmsc}
 \emph{Let $-1<r<1$, $r\neq0$, $s>0$, $t>0$, and $q=(-1-s,-1,r,1,1+t)$
 with masses $m_{i}=f_{i}\lambda+f_{i}M$ respectively. Then it is possible for q to be a
 central configuration if }
 \begin{enumerate}
-\item \emph{$0\< r<1$ and $\frac{-f_{1}}{g_{1}}<\frac{M}{\lambda}<\frac{-f_{4}}{g_{4}}$.
+\item \emph{$0<r<1$ and $\frac{-f_{1}}{g_{1}}<\frac{M}{\lambda}<\frac{-f_{4}}{g_{4}}$.
 For a given t, the possible configurations lie in the region under
 the implicit curve $\frac{-f_{1}}{g_{1}}=\frac{-f_{4}}{g_{4}}$ in
 regards to s and r.}
@@ -417,7 +420,7 @@ the implicit curve $\frac{-f_{5}}{g_{5}}=\frac{-f_{2}}{g_{2}}$ in
 regards to t and r.}\end{enumerate}
 \end{theorem}
 
-In order to find determine the parameters for central configurations, we need to find where we have positive masses. For $i={1,2,...5} m_i = f_i\lambda + g_iM > 0$. Previously it was shown that $g_1 > 0, g_3 > 0, g_5 > 0, g_2 < 0, g_4 < 0$. Using this, we can rewrite the inequalities thusly: 
+In order to find determine the parameters for central configurations, we need to find where we have positive masses. For $i={1,2,...5} m_i = f_i\lambda + g_iM > 0$. In theorem 1.\ref{willthm}, it was shown that $g_1 > 0, g_3 > 0, g_5 > 0, g_2 < 0, g_4 < 0$. Using this, we can rewrite the inequalities thusly: 
 
 \begin{equation} \begin{array}{ll}
 m_1: & \frac{M}{\lambda} > \frac{-f_1}{g_1} \\
@@ -428,38 +431,42 @@ m_5: & \frac{M}{\lambda} > \frac{-f_5}{g_5} \\
 \end{array}
 \end{equation}
 
-Thus, central configurations are possible when $max(\frac{-f_1}{g_1},\frac{-f_3}{g_3},\frac{-f_5}{g_5})<\frac{M}{\lambda}<min(\frac{-f_2}{g_2},\frac{-f_4}{g_4})$. Initially, we chose a value for r and plotted the region in terms of s and t. Then, we chose a value for t and plotted the region for s and r. When we picked a value for t and plotted the region in terms of s and r, we found that the region closely approximates to a parabola. The regions appear to approach the parabola in the $t=1$ plane and then begin to decline.
+Thus, central configurations are possible when $max(\frac{-f_1}{g_1},\frac{-f_3}{g_3},\frac{-f_5}{g_5})<\frac{M}{\lambda}<min(\frac{-f_2}{g_2},\frac{-f_4}{g_4})$. Initially, we chose a value for r and plotted the region in terms of s and t. Then, we chose a value for t and plotted the region for s and r. When we picked a value for t and plotted the region in terms of s and r, we found that the region closely approximates a parabola. The regions appear to approach the parabola in the $t=1$ plane and then begin to decline.
 
 \begin{center}
 
 \begin{figure}
+\label{rfix}
 \includegraphics[width=3.9in, height=3in]{regionsRfixed.png}
- \caption{ \label{EL}  Plots of the regions where central configurations are possible for given values of r in terms of s and t.} 
+ \caption{   Plots of the regions where central configurations are possible for given values of r in terms of s and t.} 
 \end{figure}
 
 \begin{figure}
+\label{tfix}
 \includegraphics[width=6in, height=2in]{regionstLessThan1.png}
 \includegraphics[width=6in, height=2in]{regionst18.png}
- \caption{ \label{EL}  Plots of the regions where central configurations are possible for given values of t in terms of r and s. Central configurations are possible in the regions under the curves.} 
+ \caption{   Plots of the regions where central configurations are possible for given values of t in terms of r and s. Central configurations are possible in the regions under the curves.} 
 \end{figure}
 
 \end{center}
 
 
-Therefore, we explored the regions for $t = 1$ further. First, we plotted the implicit curves $\frac{-f_1}{g_1}=m_3,\frac{-f_1}{g_1}=-\frac{-f_5}{g_5},\frac{-f_3}{g_3}=m_5$ to outline the regions for the minimum values and $\frac{-f_2}{g_2},\frac{-f_4}{g_4}$ to outline the regions for the maximum values. Then, we looked at the regions where $\frac{-f_1}{g_1}$ is greater than both $\frac{-f_3}{g_3}$ and $m_5$ and likewise for $\frac{-f_3}{g_3}$ and $m_5$ and where $-\frac{f_2}{g_2}>m_4$ and $m_4>\frac{-f_2}{g_2}$. Next, we superimposed the regions to see what our minimums and maximums would be for each region. While we initially had five regions to consider, four regions turned out to be trivial cases where the maximum was always larger than the minimum over the entire region. The only region of interest is the $\frac{-f_1}{g_1} < \frac{-f_4}{g_4}$ region. Comparing the plot of $\frac{-f_1}{g_1} < \frac{-f_4}{g_4}$ is a close to exact match for the previous plots of the the central configuration region in the $t=1$ plane. This is also the case when we choose different values for t as well.
+Therefore, we explored the regions for $t = 1$ further. First, as shown in figure \ref{rg0o}, we plotted the implicit curves $\frac{-f_1}{g_1}=m_3,\frac{-f_1}{g_1}=-\frac{-f_5}{g_5},\frac{-f_3}{g_3}=m_5$ to outline the regions for the minimum values and $\frac{-f_2}{g_2},\frac{-f_4}{g_4}$ to outline the regions for the maximum values. Then, we looked at the regions where $\frac{-f_1}{g_1}$ is greater than both $\frac{-f_3}{g_3}$ and $m_5$ and likewise for $\frac{-f_3}{g_3}$ and $m_5$ and where $-\frac{f_2}{g_2}>m_4$ and $m_4>\frac{-f_2}{g_2}$. Next, we superimposed the regions to see what our minimums and maximums would be for each region, which is shown in figure \ref{rg0r}. While we initially had five regions to consider, four regions turned out to be trivial cases where the maximum was always larger than the minimum over the entire region. The only region of interest is the $\frac{-f_1}{g_1} < \frac{-f_4}{g_4}$ region. Comparing the plot of $\frac{-f_1}{g_1} < \frac{-f_4}{g_4}$ (figure is a close to exact match for the previous plots of the the central configuration region in the $t=1$ plane. This is also the case when we choose different values for t as well.
 
 
 
 \begin{center}
 
 \begin{figure}
+\label{rg0o}  
 \includegraphics[width=6in, height=2in]{t1regionOutline.png}
- \caption{ \label{EL}  Where $-\frac{f_i}{g_i}=-\frac{f_i}{g_i}$ for specified $i$ in the $t=1$ plane. Notation is simplified in the figure. For example, 1 represents $-\frac{f_1}{g_1}$.} 
+ \caption{ Where $-\frac{f_i}{g_i}=-\frac{f_i}{g_i}$ for specified $i$ in the $t=1$ plane. Notation is simplified in the figure. For example, 1 represents $-\frac{f_1}{g_1}$.} 
 \end{figure}
 
 \begin{figure}
+\label{rg0r} 
 \includegraphics[width=6in, height=2in]{t1rG0region.png}
- \caption{ \label{EL}  Conditions for central configuration for specified regions of $r$ and $s$ in the $t=1$ plane. Notation is simplified in the figure. For example, 1 represents $-\frac{f_1}{g_1}$.}
+ \caption{  Conditions for central configuration for specified regions of $r$ and $s$ in the $t=1$ plane. Notation is simplified in the figure. For example, 1 represents $-\frac{f_1}{g_1}$.}
 \end{figure}
 
 \end{center}
@@ -468,16 +475,17 @@ We can then rotate the configuration to look at $r<0$. When $r<0$, the configura
 
 
 \begin{figure}
+\label{f1g1}
 \includegraphics[width=6in, height=2in]{ict148.png}
 \includegraphics[width=6in, height=2in]{ictp1p9.png}
- \caption{ \label{EL}  Plot of  $-\frac{f_1}{g_1} = -\frac{f_4}{g_4}$ for given values of t.}
+ \caption{   Plot of  $-\frac{f_1}{g_1} = -\frac{f_4}{g_4}$ for given values of t.}
 \end{figure}
 
 \end{center}
 
 \section{r = 0 Case Central Configurations}
 
-\begin{theorem}\label{thm5}
+\begin{theorem}\label{scthm}
 \emph{Let $s>0$, $t>0$, and $q=(-1-s,-1,0,1,1+t)$
 with masses $m_{i}=f_{i}\lambda+f_{i}M$ respectively, then it is possible for q to be a
 central configuration. }
@@ -512,11 +520,11 @@ $$\lambda f_i +M g_i+\lambda f_j +M g_j=\lambda_\tau f_j +M g_j+\lambda_\tau f_i
 $$\lambda (f_i +f_j) +M (g_i+g_j)=\lambda_\tau (f_i+f_j)+M(g_i+g_j)$$
 Assuming $f_i+f_j \neq 0$, this gives $\lambda_\tau=\lambda$. This is a contradiction meaning our initial assumption that $\lambda_\tau \neq \lambda$ is false. By having $\lambda_\tau=\lambda$ we have that the mass distribution is entirely defined by $M, \lambda, r,s,t$ and have that $m=m(\tau)$
 \end{enumerate}
-Thus the Proof of Lemma 6.1 is complete.
+Thus the Proof of Lemma 4.1 is complete.
 
 By using this lemma, we are able to reduce the number of cases that must be checked by hand in order to find the super central configurations. To begin with there were $5!=120$ permutations that needed to be checked. 
-However, part 1 of Lemma 6.1 allows us to remove all permutations that are not derangements; and part 2 of Lemma 6.1 allows us to remove from the list of derangements all permutations that have two masses swapping their respective locations. 
-The number of derangements of n objects is typically written as $!n$ and $!5=44$. the second part of Lemma 6.1 allows us to remove an additional ${n \choose 2} (!(n-2))$ from the derangements. 
+However, part 1 of Lemma 4.1 allows us to remove all permutations that are not derangements; and part 2 of Lemma 4.1 allows us to remove from the list of derangements all permutations that have two masses swapping their respective locations. 
+The number of derangements of n objects is typically written as $!n$ and $!5=44$. the second part of Lemma 4.1 allows us to remove an additional ${n \choose 2} (!(n-2))$ from the derangements. 
 This leaves $!5-{5\choose 2}(!3)=24$ permutations that must be checked by hand. We will denote the permutation $(1,2,3,4,5)$ as $\tau$ and it shall not be counted among the $24$. We will have to discuss the following $24$ permutations of $5$ masses in order to find the possible super central configurations:
 
 $$ \tau_1=(2,4,1,5,3),\hspace{1cm} \tau_2=(2,5,1,3,4),\hspace{1cm} \tau_3=(2,5,4,1,3),\hspace{1cm} \tau_4=(2,3,5,1,4)$$
@@ -535,72 +543,22 @@ It is known that it is impossible to have $3$ or $4$ equivalent masses because b
 Fix $q=(-s-1, -1, r, 1, t+1)$ with $(s,t)\in \mathbf{R^+}^3$ and $-1<r<1$. Suppose $m=(m_1, m_2, m_3, m_4, m_5)\in S(q)$ and $\tau \in P(5)$ Furthermore, assume that $m_i=m_j$ and $m_k=m_l$ with $i\neq j\neq k\neq l$ and $1\leq i,j,k,l \leq 5$. Then we shall have $m(\tau)\notin S_m(q)$ for all $\tau$.
 \end{lemma}
 
-\textit{Proof of Lemma 7.1}
+\textit{Proof of Lemma 5.1}
 First we shall define $a$ to be the number between 1 and 5 that is not $i,j,k,$ or $l$. We shall then assume that $\tau(a)\neq a$ because we know that that will not allow a super central configuration. Next, we shall assume without loss of generality that $\tau(i)=a$. From here there are two cases to examine. First we have the case $\tau(j)=i$ or $\tau(j)=j$; then there is also the case that $\tau(j)=k$ or $\tau(j)=l$. We will look at the first case first. 
 
-We know from lemma 6.1 that $\tau(j)=j$ will not allow for a super central configuration so it is easily removed leaving only $\tau(j)=i$. In this case we will have $m_i=m_j=m_a$ because when $m_i=m_j$ then we must also have that the two masses taking their places in the configuration are equivalent. Thus with three equivalent masses we know that $\tau(j)=i$ will not all for a super central configuration.
+We know from lemma 4.1 that $\tau(j)=j$ will not allow for a super central configuration so it is easily removed leaving only $\tau(j)=i$. In this case we will have $m_i=m_j=m_a$ because when $m_i=m_j$ then we must also have that the two masses taking their places in the configuration are equivalent. Thus with three equivalent masses we know that $\tau(j)=i$ will not all for a super central configuration.
 
-This leaves only two more cases. By setting, $\tau(j)=k$, we get $m_a=m_k=m_l$ which gives us three equivalent masses. Finally, by assuming that $\tau(j)=l$, we get $m_a=m_k=m_l=m_{\tau(l)}$ and so we have $4$ equivalent masses. This completes the proof of Lemma 7.1.
+This leaves only two more cases. By setting, $\tau(j)=k$, we get $m_a=m_k=m_l$ which gives us three equivalent masses. Finally, by assuming that $\tau(j)=l$, we get $m_a=m_k=m_l=m_{\tau(l)}$ and so we have $4$ equivalent masses. This completes the proof of Lemma 5.1.
 
 \begin{lemma}
 Fix $q=(-s-1, -1, r, 1, t+1)$ with $(s,t)\in \mathbf{R^+}^3$ and $-1<r<1$. Suppose $m=(m_1, m_2, m_3, m_4, m_5)\in S(q)$ and $\tau \in P(5)$ Furthermore, assume that $m_i=m_j$ with $i\neq j$ and $1\leq i,j \leq 5$. Then we shall have that $m(\tau) \notin S_m(q)$ for all $\tau$ if $f_i \neq f_j$.
 \end{lemma}
 
-\textit{Proof of Lemma 7.2:}
-If $m_i=m_j$ then we have $\lambda f_i +Mg_i=\lambda f_j+Mg_j$. Additionally, because the two masses in the $i^{th}$ and $j^{th}$ positions must still be equal, we also have $\lambda_{\tau} f_i +Mg_i=\lambda_{\tau} f_j+Mg_j$. By subtracting the second equation from the first we get $(\lambda-\lambda_{\tau})f_i=(\lambda-\lambda_{\tau})f_j$.This is only true in two cases. Either $f_i=f_j$ and more analysis is required to see if a super central configuration exists, or $\lambda=\lambda_{\tau}$ and there is no super central configuration as shown in the previous section. This completes the proof of Lemma 7.2.
+\textit{Proof of Lemma 5.2}
+If $m_i=m_j$ then we have $\lambda f_i +Mg_i=\lambda f_j+Mg_j$. Additionally, because the two masses in the $i^{th}$ and $j^{th}$ positions must still be equal, we also have $\lambda_{\tau} f_i +Mg_i=\lambda_{\tau} f_j+Mg_j$. By subtracting the second equation from the first we get $(\lambda-\lambda_{\tau})f_i=(\lambda-\lambda_{\tau})f_j$.This is only true in two cases. Either $f_i=f_j$ and more analysis is required to see if a super central configuration exists, or $\lambda=\lambda_{\tau}$ and there is no super central configuration as shown in the previous section. This completes the proof of Lemma 5.2.
 
 
-
-
-\section{General Case for Super Central Configurations}
-We have from the first section the following equations:
-$$m_1=f_1\lambda+Mg_1, \hspace{20pt} m_2=f_2\lambda+Mg_2, \hspace{20pt} m_3=f_3\lambda+Mg_3,$$
-$$m_4=f_4\lambda+Mg_4, \hspace{20pt} m_5=f_5\lambda+Mg_5,$$
-Then we also have the following equations when using the definition of super central configurations.
-$$m_{\tau(1)}=f_1\lambda_\tau+Mg_1, \hspace{20pt} m_{\tau(2)}=f_2\lambda_\tau+Mg_2, \hspace{20pt} m_{\tau(3)}=f_3\lambda_\tau+Mg_3,$$
-$$m_{\tau(4)}=f_4\lambda_\tau+Mg_4, \hspace{20pt} m_{\tau(5)}=f_5\lambda_\tau+Mg_5,$$
-A useful result from the definition for the functions $f_i$ and $g_i$ is as follows.
-\begin{lemma}
-For any $-1<r<1$ and $s,t>0$
-\begin{enumerate}
-\item $f_1+f_2+f_3+f_4+f_5=0$
-\item $g_1+g_2+g_3+g_4+g_5=1$
-\end{enumerate}
-\end{lemma}
-\textit{Proof of Lemma 8.1}
-We know that $m_1+m_2+m_3+m_4+m_5=M$ because that is how the total mass is defined. By substituting in the expressions for $m_i$ we get $(f_1+f_2+f_3+f_4+f_5)\lambda+(g_1+g_2+g_3+g_4+g_5)M=M$ as well as $(f_1+f_2+f_3+f_4+f_5)\lambda_\tau+(g_1+g_2+g_3+g_4+g_5)M=M$. 
-Because a change in $\lambda$ does not cause a change in the total mass we must have $f_1+f_2+f_3+f_4+f_5=0$, which then clearly means $g_1+g_2+g_3+g_4+g_5=1$. And thus Lemma 8.1 is proved.
-
-
-\textbf{Case 1:} $\tau_1=(2,4,1,5,3)$
-Step 1: First we set $m_1=m_{\tau_1(3)}$ and $m_2=m_{\tau_1(1)}$. Then we solve for $\lamda$ and $\lambda_\tau_1$ by using the equations from above. This gives the following results:
-$$\lambda=\frac{f_1g_3-f_1g_1+f_3g_2-f_3g_1}{{f_1}^2-f_2f_3}$$
-$$\lambda_{\tau_1}=\frac{f_2g_3-f_2g_1+f_1g_2-f_1g_1}{{f_1}^2-f_2f_3}$$
-
-Step 2: Substituting these $\lambda$ and $\lambda_\tau$ back into the original equations, then we get:
-$$m_1=M\frac{{f_1}^2g_3-{f_1}^2g_1+f_1f_3g_2-f_1f_3g_1+{f_1}^2g_1-f_2f_3g_1}{{f_1}^2-f_2f_3}$$
-$$m_2=M\frac{f_1f_2g_3-f_1f_2g_1+f_2f_3g_2-f_2f_3g_1+{f_1}^2g_2-f_2f_3g_2}{{f_1}^2-f_2f_3}$$
-$$m_3=M\frac{f_1f_3g_3-f_1f_3g_1+{f_3}^2g_2-{f_3}^2g_1+{f_1}^2g_3-f_2f_3g_3}{{f_1}^2-f_2f_3}$$
-$$m_4=M\frac{f_1f_4g_3-f_1f_4g_1+f_3f_4g_2-f_3f_4g_1+{f_1}^2g_4-f_2f_3g_4}{{f_1}^2-f_2f_3}$$
-$$m_5=M\frac{f_1f_5g_3-f_1f_5g_1+f_3f_5g_2-f_3f_5g_1+{f_1}^2g_5-f_2f_3g_5}{{f_1}^2-f_2f_3}$$
-as well as the following equations:
-$$m_{\tau_1(1)}=M\frac{f_1f_2g_3-f_1f_2g_1+{f_1}^2g_2-f_2f_3g_1}{{f_1}^2-f_2f_3}$$
-$$m_{\tau_1(2)}=M\frac{{f_2}^2g_3-{f_2}^2g_1+f_1f_2g_2-f_1f_2g_1+{f_1}^2g_2-f_2f_3g_2}{{f_1}^2-f_2f_3}$$
-$$m_{\tau_1(3)}=M\frac{-f_2f_3g_1+f_1f_3g_2-f_1f_3g_1+{f_1}^2g_3}{{f_1}^2-f_2f_3}$$
-$$m_{\tau_1(4)}=M\frac{f_2f_4g_3-f_2f_4g_1+f_1f_4g_2-f_1f_4g_1+{f_1}^2g_4-f_2f_3g_4}{{f_1}^2-f_2f_3}$$
-$$m_{\tau_1(5)}=M\frac{f_2f_5g_3-f_2f_5g_3+f_1f_5g_2-f_1f_5g_1+{f_1}^2g_5-f_2f_3g_5}{{f_1}^2-f_2f_3}$$
-
-Because these equations were created by assuming that $m_1=m_{\tau_1(3)}$ and $m_2=m_{\tau_1(1)}$, we must now investigate when it is possible to have $m_3=m_{\tau_1(5)}$, $m_4=m_{\tau_1(2)}$ and $m_5=m_{\tau_1(4)}$. This gives us the following three equations:
-$$m_3-m_{\tau_1(5)}=M\frac{({f_1}^2-f_2f_3)(g_3-g_5)+(f_1f_3-f_2f_5)(g_3-g_1)+({f_3}^2-f_1f_5)(g_2-g_1)}{{f_1}^2-f_2f_3}=\frac{h_{11}M}{{f_1}^2-f_2f_3}$$
-$$m_4-m_{\tau_1(2)}=M\frac{({f_1}^2-f_2f_3)(g_4-g_2)+(f_1f_4-{f_2}^2)(g_3-g_1)+(f_3f_4-f_1f_2)(g_2-g_1)}{{f_1}^2-f_2f_3}=\frac{h_{12}M}{{f_1}^2-f_2f_3}$$
-$$m_5-m_{\tau_1(4)}=M\frac{({f_1}^2-f_2f_3)(g_5-g_4)+(f_1f_5-f_2f_4)(g_3-g_1)+(f_3f_5-f_1f_4)(g_2-g_1)}{{f_1}^2-f_2f_3}=\frac{h_{13}M}{{f_1}^2-f_2f_3}$$
-
-We have from direct computation and using the fact that $f_1+f_2+f_3+f_4+f_5=0$ that $h_{11}+h_{12}+h_{13}=0$ for all $s,t > 0$ and $-1<r<1$. In order for $\tau_1$ to give a super central configuration we must have $h_{11}=0$, $h_{12}=0$, and $h_{13}=0$ all at the same time. However, because $h_{11}+h_{12}+h_{13}=0$, it is sufficient to have only $h_{11}=0$ and $h_{12}=0$.
-
-\textbf{Case 2:} $\tau_2=(2,5,1,3,4)$
-
-
-\section*{Acknowledgment}
+%\section*{Acknowledgment}
 
 %The author would like to thank Dr. Chi-Kwong Li for some valuable discussion on the properties of Pfaffian, especially the simple proof of theorem \ref{Pf6}.
 
@@ -611,7 +569,7 @@ for collinear central configuration, Celestial Mechanics and
 Dynamical Astronomy 77 (2000), 77--91.
 
 \bibitem{AC} Arthur Cayley, On the theory of permutants, Cambridge and Dublin Mathematical Journal VII:
-(1852) 40�51 Reprinted in Collected mathematical papers, volume 2.
+(1852) 40-51 Reprinted in Collected mathematical papers, volume 2.
 
 
 \bibitem{Buch} H.E. Buchanan, On certain determinants connected with a problem in Celestial Mechanics, Bull. Amer. Math. Soc. 5 (1909), 227-231.
