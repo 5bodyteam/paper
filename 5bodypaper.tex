@@ -286,7 +286,7 @@ $m_{5}: \frac{-m_1}{(2s+2)^2} + \frac{-m_2}{(2+s)^2} +\frac{-m_3}{(s+1)^2} + \fr
 For example, if we let $s=2$, we will get the matrix (2.1), this helps to give a numerical visual of how the equations form a skew symmetric matrix:
 
 \begin{equation}
-{\left(\begin{array}{ccccc}
+\left(\begin{array}{ccccc}
 0 & \frac{1}{4} & \frac{1}{9} & \frac{1}{16} & \frac{1}{36} & \frac{-1}{4} & 0 & 1 & \frac{1}{4} & \frac{1}{16} & \frac{-1}{9} & -1 & 0 & 1 & \frac{1}{9} & \frac{-1}{16} & \frac{-1}{4} & -1 & 0 & \frac{1}{4} & \frac{-1}{36} & \frac{-1}{16} & \frac{-1}{9} & \frac{-1}{4} & 0 
 \end{array}\right)\\
 \end{equation}
@@ -314,8 +314,8 @@ $m_{5}: \frac{-m_1}{(t+s+2)^2} + \frac{-m_2}{(2+t)^2} +\frac{-m_3}{(t+1-r)^2} + 
 
 
 \begin{equation} \begin{array}{l}
-m_{4}=\frac{f_{4s}(s)\lambda+g_{4s}(s)m_{3}}{d}4s^{2}(s+2)^{2} \\
-m_{5}=\frac{f_{5s}(s)\lambda+g_{5s}(s)m_{3}}{d}s^{2}(s+2)^{2}(2s+2)^{2} \\
+m_{4}=\frac{f_{4s}(s)\lambda+g_{4s}(s)m_{3}}{d(s)}4s^{2}(s+2)^{2} \\
+m_{5}=\frac{f_{5s}(s)\lambda+g_{5s}(s)m_{3}}{d(s)}s^{2}(s+2)^{2}(2s+2)^{2} \\
 $where:$\\
 f_{4s}=(s+2)^{2}[(s+1)(2s+2)^{2}+s^{2}]-s^{2}(2s+2)^{2}(1+s) \\
 g_{4s}=\frac{s^{2}(2s+2)^{2}}{(1+s)^{2}}-(s+2)^{2}[\frac{(2s+2)^{2}}{(s+1)^{2}}+s^{2}] \\
@@ -391,13 +391,14 @@ have: $$h_{2}(s)-h_{1}(s)=\frac{s^{11}+11s^{10}+51s^{9}+256s^{8}+1208s^{7}+3856s
 Since $s>0$, $s^{11}+11s^{10}+51s^{9}+256s^{8}+1208s^{7}+3856s^{6}+7856s^{5}+10240s^{4}+8320s^{3}+3840s^{2}+768s>0$,
 $h_{1d}(s)>0$, and $(s+1)^{2}>0$. Since $0<s<\bar{s}$, $h_{2d}(s)>0$.
 Therefore, $h_{2}(s)-h_{1}(s)>0.$ Therefore, we can always find positive
-masses for any value of s such that $0<s<\bar{s}$ and $s>\bar{s}$. See figure \ref{SCG1}.
+masses for any value of s such that $0<s<\bar{s}$ and $s>\bar{s}$. For a plot of the region, see figure \ref{fig:SCG1}.
 
 \begin{center}
 \begin{figure}
-\label{SCG1}
+
 \includegraphics[width=2.7in, height=2.7in]{Lm3RegionSpecialCase.png}
  \caption{Region for $\frac{\lambda}{m_3}$ in terms of s. The blue region is the area where central configurations are possible.  }
+ \label{fig:SCG1}
 \end{figure}
 \end{center}
 
@@ -416,7 +417,7 @@ the implicit curve $\frac{-f_{1}}{g_{1}}=\frac{-f_{4}}{g_{4}}$ in
 regards to s and r.}
 \item \emph{$-1<r<0$ and $\frac{-f_{5}}{g_{5}}<\frac{M}{\lambda}<\frac{-f_{2}}{g_{2}}$.
 For a given t, the possible configurations lie in the region under
-the implicit curve $\frac{-f_{5}}{g_{5}}=\frac{-f_{2}}{g_{2}}$ in
+the implicit curve $-\frac{f_{5}}{g_{5}}=-\frac{f_{2}}{g_{2}}$ in
 regards to t and r.}\end{enumerate}
 \end{theorem}
 
@@ -431,57 +432,69 @@ m_5: & \frac{M}{\lambda} > \frac{-f_5}{g_5} \\
 \end{array}
 \end{equation}
 
-Thus, central configurations are possible when $max(\frac{-f_1}{g_1},\frac{-f_3}{g_3},\frac{-f_5}{g_5})<\frac{M}{\lambda}<min(\frac{-f_2}{g_2},\frac{-f_4}{g_4})$. To simplify notation, we will refer to $-\frac{f_i}{g_i}$ as $min_i$ for $i={1,3,5}$ and $max_i$ for $i={2,4}$ Initially, we chose a value for r and plotted the region in terms of s and t. Then, we chose a value for t and plotted the region for s and r. When we picked a value for t and plotted the region in terms of s and r, we found that the region closely approximates a parabola. The regions appear to approach the parabola in the $t=1$ plane and then begin to decline.
+Thus, central configurations are possible when $max(\frac{-f_1}{g_1},\frac{-f_3}{g_3},\frac{-f_5}{g_5})<\frac{M}{\lambda}<min(\frac{-f_2}{g_2},\frac{-f_4}{g_4})$. To simplify notation, we will refer to $-\frac{f_i}{g_i}$ as $min_i$ for $i=\{1,3,5\}$ and $max_i$ for $i=\{2,4\}$ Initially, we chose a value for r and plotted the region in terms of s and t. Then, we chose a value for $t$ and plotted the region for $s$ and $r$. When we picked a value for $t$ and plotted the region in terms of $s$ and $r$, we found that the region closely approximates a parabola. The regions appear to approach the parabola in the $t=1$ plane and then begin to decline.
 
 \begin{center}
 
 \begin{figure}
-\label{rfix}
+
 \includegraphics[width=3.9in, height=3in]{regionsRfixed.png}
- \caption{   Plots of the regions where central configurations are possible for given values of r in terms of s and t.} 
+ \caption{   Plots of the regions where central configurations are possible for given values of $r$ in terms of $s$ and $t$.} 
+\label{rfix}
 \end{figure}
 
 \begin{figure}
-\label{tfix}
+
 \includegraphics[width=6in, height=2in]{regionstLessThan1.png}
 \includegraphics[width=6in, height=2in]{regionst18.png}
  \caption{   Plots of the regions where central configurations are possible for given values of t in terms of r and s. Central configurations are possible in the regions under the curves.} 
+ \label{tfix}
 \end{figure}
 
 \end{center}
 
 
-Therefore, we explored the regions for $t = 1$ further. First, as shown in figure \ref{rg0o}, we plotted the implicit curves $min_1=min_3, min1=min_5,min_3=min_5$ to outline the regions for the minimum values and $\frac{-f_2}{g_2},\frac{-f_4}{g_4}$ to outline the regions for the maximum values. Then, we looked at the regions where $\frac{-f_1}{g_1}$ is greater than both $\frac{-f_3}{g_3}$ and $m_5$ and likewise for $\frac{-f_3}{g_3}$ and $m_5$ and where $-\frac{f_2}{g_2}>m_4$ and $m_4>\frac{-f_2}{g_2}$. Next, we superimposed the regions to see what our minimums and maximums would be for each region, which is shown in figure \ref{rg0r}. While we initially had five regions to consider, four regions turned out to be trivial cases where the maximum was always larger than the minimum over the entire region. The only region of interest is the $\frac{-f_1}{g_1} < \frac{-f_4}{g_4}$ region. Comparing the plot of $\frac{-f_1}{g_1} < \frac{-f_4}{g_4}$ (figure is a close to exact match for the previous plots of the the central configuration region in the $t=1$ plane. This is also the case when we choose different values for t as well.
+Therefore, we explored the regions for $t = 1$ further. First, as shown in figure \ref{rg0o}, we plotted the implicit curves $min_1=min_3, min_1=min_5,min_3=min_5,max_2=max_4$  to outline the regions. Then, we looked at the regions where $min_1$ is greater than both $min_3$ and $min_5$ and likewise for $min_3$ and $min_5$ and where $max_2<max_4$ and $max_4<max_2$. Next, we superimposed the regions to see what our minimums and maximums would be for each region, which is shown in figure \ref{rg0r}. While we initially had five regions to consider, four regions turned out to be trivial cases where the maximum was always larger than the minimum over the entire region. The only region of interest is the $min_1 < max_4$ region. Comparing the plot of $min_1 < min_4$ (figure \ref{f1g1}) is a close to exact match for the previous plots of the the central configuration region in the $t=1$ plane (figure \ref{tfix}). This is also the case when we choose different values for t as well.
 
 
 
 \begin{center}
 
 \begin{figure}
-\label{rg0o}  
 \includegraphics[width=6in, height=2in]{t1regionOutline.png}
- \caption{ Where $-\frac{f_i}{g_i}=-\frac{f_i}{g_i}$ for specified $i$ in the $t=1$ plane. Notation is simplified in the figure. For example, 1 represents $-\frac{f_1}{g_1}$.} 
+ \caption{ Where $min_i=min_j$ and $max_2=max_4$ for specified $i$ and $j$ in the $t=1$ plane.}
+ \label{rg0o}  
 \end{figure}
 
 \begin{figure}
-\label{rg0r} 
 \includegraphics[width=6in, height=2in]{t1rG0region.png}
- \caption{  Conditions for central configuration for specified regions of $r$ and $s$ in the $t=1$ plane. Notation is simplified in the figure. For example, 1 represents $-\frac{f_1}{g_1}$.}
+ \caption{  Conditions for central configuration for specified regions of $r$ and $s$ in the $t=1$ plane.}
+ \label{rg0r} 
 \end{figure}
 
-\end{center}
-
-We can then rotate the configuration to look at $r<0$. When $r<0$, the configuration is the same as the $r>0$ configuration, but t and s are swapped. Also, $m1$ becomes $m5$ and $m2$ becomes $m4$. Therefore, the defining curve for $r<0$ is $-\frac{f_5}g_5}=-\frac{f_2}{g_2}$ and $-\frac{f_5}{g_5}<\frac{M}{\lambda}<-\frac{f_2}{g_2}$ for a central configuration to exist. This can be confirmed by plotting the region for a given t.
-
-
 \begin{figure}
-\label{f1g1}
 \includegraphics[width=6in, height=2in]{ict148.png}
 \includegraphics[width=6in, height=2in]{ictp1p9.png}
- \caption{   Plot of  $-\frac{f_1}{g_1} = -\frac{f_4}{g_4}$ for given values of t.}
+ \caption{   Plot of  $min_1=min_4$ for given values of t.}
+ \label{f1g1}
 \end{figure}
 
 \end{center}
+
+We can then rotate the configuration to look at $r<0$. When $r<0$, the configuration is the same as the $r>0$ configuration, but $t$ and $s$ are swapped. Also, $m_1$ becomes $m_5$ and $m_2$ becomes $m_4$. Therefore, the defining curve for $r<0$ is $min_5=max_2$ and $min_5<\frac{M}{\lambda}<max_2$ for a central configuration to exist. This can be confirmed by plotting the region for a given t (figure \ref{rlt0ip}).
+
+
+\begin{center}
+
+\begin{figure}
+\includegraphics[width=6in, height=2in]{rlt0ip.png}
+ \caption{Plot of  $min_5 = max_2$ (blue) superimposed on the region where central configurations are possible (red) in the $s=1$ plane.}
+ \label{rlt0ip}
+\end{figure}
+
+\end{center}
+
+
 
 \section{r = 0 Case Central Configurations}
 
@@ -491,11 +504,18 @@ with masses $m_{i}=f_{i}\lambda+f_{i}M$ respectively, then it is possible for q 
 central configuration. }
 \end{theorem}
 
-Exploring the central configurations for the $r = 0$ case using the same method as the $r > 0$ case, we can seperate the problem into six regions based on the maximum of $m_1,m_2,m_3$ and the minimum of $m_2,m_4$. If we rotate the configuration, half of these cases are identical. This can also be observed in the symmetry of the figure. If we swap the s and t axises and $f_1,g_1$ and $f_5,g_5$ and $f_2,g_2$ and $f_4,g_4$, we would have an identical graph. Therefore, we can look at three of these regions to see if $-f_5/g_5 < -f_4/g_4$, $-f_5/g_5<-f_2/g_2$, and $-f_3/g_3<-f_4/g_4$. For each of these regions, the maximum value is always larger than the minimum value. 
+Exploring the central configurations for the $r = 0$ case using the same method as the $r > 0$ case, we can seperate the problem into the six regions in figure \ref{rzr} based on the maximum of $min_1,min_2,min_3$ and the minimum of $max_2,max_4$. If we rotate the configuration, half of these cases are identical. This can also be observed in the symmetry of the figure. If we swap the s and t axises and $f_1,g_1$ and $f_5,g_5$ and $f_2,g_2$ and $f_4,g_4$, we would have an identical graph. Therefore, we can look at three of these regions to see if $min_5 < max_4$, $min_5<max_2$, and $min_3<max_4$. For each of these regions, we did not find a region where the maximum value is not larger than the minimum value. Therefore, we did not find a region where the central configuration is not possible when r = 0.
+
+\begin{figure}
+\includegraphics[width=6in, height=6in]{r0o.png}
+ \caption{  Where $min_i=min_j$ and $max_2=max_4$ for specified $i$ and $j$ in the $r=0$ plane.}
+ \label{r0o} 
+\end{figure}
 
 \begin{figure}
 \includegraphics[width=6in, height=6in]{rIsZeroRegions.png}
- \caption{ \label{EL}  Conditions for central configuration for specified regions of $r$ and $s$ in the $t=1$ plane. Notation is simplified in the figure. For example, 1 represents $-\frac{f_1}{g_1}$.}
+ \caption{  Conditions for central configuration for specified regions of $s$ and $t$ in the $t=0$ plane.}
+ \label{rzr} 
 \end{figure}
 
 
@@ -668,4 +688,3 @@ Astronomy 107, (2010) 353�-376.
 Astronomy 118 (2014), no. 1, 89-97.
 \end{thebibliography}
 \end{document} 
-
