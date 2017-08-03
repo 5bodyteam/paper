@@ -235,13 +235,13 @@ m_{3}=f_{3}(r,s,t)\lambda+g_{3}(r,s,t)M \\
 m_{4}=f_{4}(r,s,t)\lambda+g_{4}(r,s,t)M \\
 m_{5}=f_{5}(r,s,t)\lambda+g_{5}(r,s,t)M \\
 $where:$ \\
-f_{1}(r,s,t)=[f_{1L}(s,t)-f_{3}(r,s,t)g_{1}(r,s,t)+f_{1c}(s,t)c(r,s,t)]s^{2} \\
+f_{1}(r,s,t)=[f_{1L}(s,t)+f_{3}(r,s,t)g_{1}(r,s,t)+f_{1c}(s,t)c(r,s,t)]s^{2} \\
 g_{1}(r,s,t)=g_{13}(r,s,t)g_{3}(r,s,t)s^{2} \\
-f_{2}(r,s,t)=[f_{2L}(s,t)-f_{3}(r,s,t)g_{23}(r,s,t)+f_{2c}(r,s,t)c]s^{2} \\
+f_{2}(r,s,t)=[f_{2L}(s,t)+f_{3}(r,s,t)g_{23}(r,s,t)+f_{2c}(r,s,t)c]s^{2} \\
 g_{2}(r,s,t)=g_{23}(r,s,t)g_{3}(r,s,t)s^{2} \\
-f_{3}(r,s,t)=f_{3L}g_{3} \\
-f_{4}(r,s,t)=[\frac{f_{4L}(s,t)}{d(s,t)}-\frac{g_{43}(r,s,t)f_{3}(r,s,t)}{d(s,t)}+\frac{f_{4c}(s,t)}{d(s,t)}c(r,s,t)]4t^{2}(s+2)^{2} \\
-f_{5}=[\frac{f_{5L}(s)}{d(s,t)}-\frac{g_{53}(r,s)f_{3}(r,s,t)}{d(s,t)}+\frac{f_{5c}(s)}{d(s,t)}c(r,s,t)]\gamma_{5}t^{2} \\
+f_{3}(r,s,t)=-f_{3L}g_{3} \\
+f_{4}(r,s,t)=[\frac{f_{4L}(s,t)}{d(s,t)}+\frac{g_{43}(r,s,t)f_{3}(r,s,t)}{d(s,t)}+\frac{f_{4c}(s,t)}{d(s,t)}c(r,s,t)]4t^{2}(s+2)^{2} \\
+f_{5}=[\frac{f_{5L}(s)}{d(s,t)}+\frac{g_{53}(r,s)f_{3}(r,s,t)}{d(s,t)}+\frac{f_{5c}(s)}{d(s,t)}c(r,s,t)]\gamma_{5}t^{2} \\
 g_{5}=\frac{g_{53}(r,s)\gamma_{5}t^{2}g_{3}(r,s,t)}{d(s,t)} \\
 \end{array}
 \end{equation}
@@ -252,18 +252,23 @@ g_{5}=\frac{g_{53}(r,s)\gamma_{5}t^{2}g_{3}(r,s,t)}{d(s,t)} \\
 
 \begin{theorem}
 
-\emph{Let $s>0$, $\bar{s}\approx1.39681$ be the
-real positive root of $h_{2d}(s)$, and $q=(-1-s,-1,0,1,1+s)$ with
-masses $m_{3}$ and $m_{i}=(f_{iL}(s)+f_{ic}(s)c)L+f_{i3}(s)m_{3}$
-for masses $m_{1},m_{2},m_{4},m_{5}.$ Then q is a central configuration
-if}
+\emph{Let $s>0$, $\bar{s}\approx1.39681$ be the real positive root of $h_{2d}(s)$, and \\
+$q=(-1-s,-1,0,1,1+s)$ with masses $m_{3}$ and $m_{i}=[f_{iL}(s)+f_{ic}(s)c]\lambda + g_{i3}(s)m_{3}$ \\
+for masses $m_{1},m_{2},m_{4},m_{5}.$ Then q is a central configuration if}
+
 \begin{enumerate}
-\item \emph{$0<s<\bar{s}$ and $h_{2}(s)<\frac{\lambda}{m_{3}}<h_{1}(s)$}
+\item \emph{$0<s<\bar{s}$ and $h_{1}(s)<\frac{\lambda}{m_{3}}<h_{2}(s)$}
 \item \emph{$s>\bar{s}$ and $\frac{\lambda}{m_{3}}>h_{1}(s)$}
 \end{enumerate}
-where $h_{1}=\frac{h_{1n}}{h_{1d}}$, $h_{2}=\frac{h_{2n}}{h_{2d}(s+1)^{2}}$, \\
-$h_{1n}=s^{4}+4s^{3}+4s^{2}+16s+16$, $h_{1d}=17s^{4}+68s^{3}+100s^{2}+64s+16$, ]]
+where $h_{1}(s)=\frac{h_{1n}(s)}{h_{1d}(s)}$, $h_{2}(s)=\frac{h_{2n}(s)}{h_{2d}(s)(s+1)^{2}}$, \\
+$h_{1n}(s)=s^{4}+4s^{3}+4s^{2}+16s+16$, $h_{1d}(s)=17s^{4}+68s^{3}+100s^{2}+64s+16$, \\
 $h_{2n}(s)=7s^{4}+28s^{3}+52s^{2}+48s+16$, and $h_{2d}(s)=-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16$.
+\end{theorem}
+
+\begin{theorem}
+\emph{Let $s>0$, and $q=(-1-s,-1,0,1,1+s)$ with masses $m_{3}$ \\
+ and $m_{i}=[f_{iL}(s)+f_{ic}(s)c]\lambda + g_{i3}(s)m_{3}$ for masses $m_{1},m_{2},m_{4},m_{5}.$ \\
+ Then it is possible for q to be a central configuration.}
 \end{theorem}
 
 
@@ -353,7 +358,7 @@ h_{1}: & [-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16]\lambda<[8s^{2}+16s+16-\frac{s^{4}+
 \end{array}
 \end{equation}
 
-Since $s>0$, $h_{1d}(s)=-17s^{4}-68s^{3}-100s^{2}-64s-16<0$, dividing by $h_{1d}$ will flip the inequality.
+Since $s>0$, $-h_{1d}(s)=-17s^{4}-68s^{3}-100s^{2}-64s-16<0$, dividing by $-h_{1d}(s)$ will flip the inequality.
 
 
 \begin{equation}
@@ -373,7 +378,7 @@ h_{1}: & \frac{\lambda}{m_{3}}>\frac{s^{4}+4s^{3}+4s^{2}+16s+16}{17s^{4}+68s^{3}
 \end{equation}
 
 
-Using Descartes Rule and the intermediate theorem, we find that $h_{2d}=-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16$ has one positive real root at $\bar{s}\approx1.39681$. Therefore, we need to split $h_2$ into three cases.  When $s>\bar{s}$, $h_{2d}>0$. When $s<\bar{s}$, $h_{2d}<0$ and the inequality is flipped when we divide by $h_{2d}$. And when $s=\bar{s}$, $h_{2d}=0$ and the inequality is undefined.
+Using Descartes Rule and the intermediate theorem, we find that $h_{2d}(s)=-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16$ has one positive real root at $\bar{s}\approx1.39681$. Therefore, we need to split $h_2$ into three cases.  When $s>\bar{s}$, $h_{2d}>0$. When $s<\bar{s}$, $h_{2d}(s)<0$ and the inequality is flipped when we divide by $h_{2d}(s)$. And when $s=\bar{s}$, $h_{2d}(s)=0$ and the inequality is undefined.
 
 When $0<s<\bar{s}$:
 
@@ -383,7 +388,7 @@ When $s>\bar{s}$:
 
 $h_{2}:\;\frac{\lambda}{m_{3}}>\frac{[8s^{2}+16s+16-\frac{s^{4}+4s^{3}+4s^{2}}{(s+1)^{2}}]}{-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16}$
 
-In the case that $s>\bar{s}$, $\frac{\lambda}{m_3}$ must satisfy both $\frac{\lambda}{m_{3}}>h_{1}(s)$ and $\frac{\lambda}{m_{3}}>h_{2}(s)$. However, $h_{1} > h_2$, and therefore, it is enough to say that $\frac{\lambda}{m_{3}}>h_{1}(s)$. Since $s>0$, $h_{2n} > 0$, $h_{1n} >0$, $h_{1d}>0$, and $(s+1)^2>0$. Since $h_{2d}$ is negative and $h_{2n}$ and ${s+1}^2$ are positive, $h_{2}<0$ when $s>\bar{s}$. Since $h_{1d}$ and $h_{1n}$ are positive, $h_1>0$. Since $h_1>0$ and $0>h_2$, $h_1>h_2$ when $s>\bar{s}$. \\
+In the case that $s>\bar{s}$, $\frac{\lambda}{m_3}$ must satisfy both $\frac{\lambda}{m_{3}}>h_{1}(s)$ and $\frac{\lambda}{m_{3}}>h_{2}(s)$. However, $h_{1}(s) > h_2(s)$, and therefore, it is enough to say that $\frac{\lambda}{m_{3}}>h_{1}(s)$. Since $s>0$, $h_{2n}(s) > 0$, $h_{1n}(s) >0$, $h_{1d}(s)>0$, and $(s+1)^2>0$. Since $h_{2d}(s)$ is negative and $h_{2n}(s)$ and ${s+1}^2$ are positive, $h_{2}(s)<0$ when $s>\bar{s}$. Since $h_{1d}(s)$ and $h_{1n}(s)$ are positive, $h_1(s)>0$. Since $h_1(s)>0$ and $0>h_2(s)$, $h_1(s)>h_2(s)$ when $s>\bar{s}$. \\
 
 If we find the difference between $h_{2}(s)$ and $h_{1}(s)$ and simplify the expression, we
 have: $$h_{2}(s)-h_{1}(s)=\frac{s^{11}+11s^{10}+51s^{9}+256s^{8}+1208s^{7}+3856s^{6}+7856s^{5}+10240s^{4}+8320s^{3}+3840s^{2}+768s}{(h_{2d}(s))(h_{1d}(s))(s+1)^{2}(-s^{5}-5s^{4}-8s^{3}+4s^{2}+16s+16)}$$
@@ -408,7 +413,7 @@ masses for any value of s such that $0<s<\bar{s}$ and $s>\bar{s}$. For a plot of
 \begin{theorem}
 \label{thmsc}
 \emph{Let $-1<r<1$, $r\neq0$, $s>0$, $t>0$, and $q=(-1-s,-1,r,1,1+t)$
-with masses $m_{i}=f_{i}\lambda+f_{i}M$ respectively. Then it is possible for q to be a
+with masses $m_{i}=f_{i}\lambda+g_{i}M$ respectively. Then it is possible for q to be a
 central configuration if }
 \begin{enumerate}
 \item \emph{$0<r<1$ and $\frac{-f_{1}}{g_{1}}<\frac{M}{\lambda}<\frac{-f_{4}}{g_{4}}$.
@@ -416,7 +421,7 @@ For a given t, the possible configurations lie in the region under
 the implicit curve $\frac{-f_{1}}{g_{1}}=\frac{-f_{4}}{g_{4}}$ in
 regards to s and r.}
 \item \emph{$-1<r<0$ and $\frac{-f_{5}}{g_{5}}<\frac{M}{\lambda}<\frac{-f_{2}}{g_{2}}$.
-For a given t, the possible configurations lie in the region under
+For a given t, the possible configurations lie in the region above
 the implicit curve $-\frac{f_{5}}{g_{5}}=-\frac{f_{2}}{g_{2}}$ in
 regards to t and r.}\end{enumerate}
 \end{theorem}
@@ -500,7 +505,7 @@ We can then rotate the configuration to look at $r<0$. When $r<0$, the configura
 
 \begin{theorem}\label{scthm}
 \emph{Let $s>0$, $t>0$, and $q=(-1-s,-1,0,1,1+t)$
-with masses $m_{i}=f_{i}\lambda+f_{i}M$ respectively, then it is possible for q to be a
+with masses $m_{i}=f_{i}\lambda + g_{i}M$ respectively, then it is possible for q to be a
 central configuration. }
 \end{theorem}
 
@@ -530,7 +535,7 @@ Fix $q=(-s-1, -1, r, 1, t+1)$ with $(s,t)\in \mathbf{R^+}^3$ and $-1<r<1$. Suppo
 \end{enumerate}
 \end{lemma}
 
-\textit{Proof of Lemma 4.1}
+\textit{Proof of Lemma 6.1}
 \begin{enumerate}
 \item If $m_{\tau(i)}=m_i$ for some $i$, we can assume without loss of generality that $i=1$ which gives
 $$ m_1=\lambda f_1+M g_1=\lambda_\tau f_1+M g_1=m_{\tau(1)}$$. This, shows that $\lambda_\tau=\lambda$. We know that the mass distribution is entirely fixed for a given $r,s,t,\lambda,$ and $M$ and so if $\lambda_\tau=\lambda$ then then $m(\tau)=m$.
@@ -595,15 +600,64 @@ For any $-1<r<1$ and $s,t>0$
 \item $g_1+g_2+g_3+g_4+g_5=1$
 \end{enumerate}
 \end{lemma}
+
 \textit{Proof of Lemma 8.1}
 We know that $m_1+m_2+m_3+m_4+m_5=M$ because that is how the total mass is defined. By substituting in the expressions for $m_i$ we get $(f_1+f_2+f_3+f_4+f_5)\lambda+(g_1+g_2+g_3+g_4+g_5)M=M$ as well as $(f_1+f_2+f_3+f_4+f_5)\lambda_\tau+(g_1+g_2+g_3+g_4+g_5)M=M$. 
 Because a change in $\lambda$ does not cause a change in the total mass we must have $f_1+f_2+f_3+f_4+f_5=0$, which then clearly means $g_1+g_2+g_3+g_4+g_5=1$. And thus Lemma 8.1 is proved.
 
+We can reorganize the list of permutations and reduce the number of cases once we investigate the inverse permutations and their properties. For a permutation, $\tau$, the inverse permutation, ${\tau}^{-1}$, will be the permutation such that $\tau({\tau}^{-1})=(1,2,3,4,5)$ and ${\tau}^{-1}(\tau)=(1,2,3,4,5)$. We have that the following pairs of permutations are inverses:
+$$\tau_1=(2,4,1,5,3) \hspace{20pt} \tau_8=(3,1,5,2,4)$$
+$$\tau_2=(2,5,1,3,4) \hspace{20pt} \tau_7=(3,1,4,5,2)$$
+$$\tau_3=(2,5,4,1,3) \hspace{20pt} \tau_{13}=(4,1,5,3,2)$$
+$$\tau_4=(2,3,5,1,4) \hspace{20pt} \tau_{14}=(4,1,2,5,3)$$
+$$\tau_5=(2,3,4,5,1) \hspace{20pt} \tau_{19}=(5,1,2,3,4)$$
+$$\tau_6=(2,4,5,3,1) \hspace{20pt} \tau_{20}=(5,1,4,2,3)$$
+$$\tau_9=(3,4,5,1,2) \hspace{20pt} \tau_{16}=(4,3,1,5,2)$$
+$$\tau_{10}=(3,4,5,1,2) \hspace{20pt} \tau_{15}=(4,5,1,2,3)$$
+$$\tau_{11}=(3,4,2,5,1) \hspace{20pt} \tau_{21}=(5,3,1,2,4)$$
+$$\tau_{12}=(3,5,4,2,1) \hspace{20pt} \tau_{22}=(5,4,1,3,2)$$
+$$\tau_{17}=(4,5,2,3,1) \hspace{20pt} \tau_{24}=(5,3,4,1,2)$$
+$$\tau_{18}=(4,3,5,2,1) \hspace{20pt} \tau_{23}=(5,4,2,1,3)$$
+
+Now we must prove that knowing the inverse permutations is useful.
+
+\begin{lemma}
+If we have $\tau$ and ${\tau}^{-1}$, then we can solve for $\lambda$ and $\lambda_\tau$ as well as $\lambda$ and $\lambda_{{\tau}^{-1}}$. They will have the relationship that $\lambda=\lambda_{{\tau}^{-1}$ and $\lambda_\tau=\lambda$. Additionally, if $q$ works for $\tau$ then $q$ will also work for ${\tau}^{-1}$
+\end{lemma}
+
+\textit{Proof of Lemma 8.2}
+First we will define $\tau \in P(5)$ to be the permutation with $a$ in the $1^{st}$ position and $1$ in $b^{th}$ position, $1<a,b \leq 5$, and $a \neq b$.
+Then ${\tau}^{-1}$ must the the permutation with $b$ in the $1^{st}$ position and $1$ in the $a^{th}$ position. Using $\tau$ to set up equivalence between the masses we get $m_1=m_{\tau(a)}$ and $m_b=m_{\tau(1)}$ or:
+$$f_1\lambda + Mg_1=f_a\lambda_\tau +Mg_a \hspace{30pt} f_b\lambda +Mg_b=f_1\lambda_\tau +Mg_1$$
+Upon solving for $\lambda$ and $\lambda_\tau$ we get:
+$$\lambda=\frac{f_1(g_a-g_1)+f_a(g_b-g_1)}{{f_1}^2-f_af_b}$$
+$$\lambda_\tau=\frac{f_1(g_b-g_1)+f_b(g_a-g_1)}{{f_1}^2-f_af_b}$$
+If we do the same thing with ${\tau}^{-1}$ then we get the following for $\lambda$ and $\lambda_{{\tau}^{-1}}$:
+$$\lambda=\frac{f_1(g_b-g_1)+f_b(g_a-g_1)}{{f_1}^2-f_af_b}$$
+$$\lambda_{{\tau}^{-1}}=\frac{f_1(g_a-g_1)+f_a(g_b-g_1)}{{f_1}^2-f_af_b}$$
+It is clear that the two values of $\lambda$ are just switched for the two permutations that are inverses. 
+Additionally, assume $q$ allows for a positive mass vector, $m$; then because the only difference in the computations for the two permutations are the switched values of $\lambda$ and $\lambda_\tau$ both permutations will give a positive mass vector. Thus ends the proof of Lemma 8.2.
+
+\begin{remark}
+A numerical example here shows both that super central configurations do exist and that permutations that are inverses will have their values of $\lambda$ and $\lambda_\tau$ switched for a given $q$.
+For $(r,s,t)=(0.125,1.3790485, 0.79071297)$, $\lambda=0.148681426M$, and $\lambda_\tau=0.08153146457M$; we get:$$m=(0.2475817000M, 0.3894002661M, 0.1604071598M, 0.1570644440M, 0.0455464299M)$$ and $S_m(q)=\{(0.3894002661M, 0.1570644440M, 0.2475817000M, 0.0455464299M,0.1604071598M)\}$.
+For the same $(r,s,t)$, $\lambda=0.08153146457M$, and $\lambda_\tau=0.148681426M$; we get: $$m=(0.3894002661M, 0.1570644440M, 0.2475817000M, 0.0455464299M,0.1604071598M)$$ and $S_m(q)=\{(0.2475817000M, 0.3894002661M, 0.1604071598M, 0.1570644440M, 0.0455464299M)\}$
+\end{remark}
+
+\begin{lemma}
+If we have that $h_{n1}$, $h_{n2}$, and $h_{n3}$ are the numerators of the expressions defined by $m_i-m_{\tau(j)}$ (when $\tau(j)=i$), for the three pairs of $m_i$ and $m_{\tau(j)}$ not used to define $\lambda$ and $\lambda_\tau_n$; then, for all $-1<r<1$, $s,t>0$ we have that $h_{n1}+h_{n2}+h_{n3}=0$. $n$ is used as the case number.
+\end{lemma}
+
+\textit{Proof of Lemma 8.4}
+We know that each $h_{nl}$ can be written as $m_i-m_{\tau(j)}$; additionally, the two pairs that are not used to construct $h_{nl}$ already have their difference defined as $0$ by being used to construct $\lambda$ and $\lambda_\tau$.
+So by summing all three $h_{nl}$'s and the other two pairs we get $$0+0+h_{n1}+h_{n2}+h_{n3}=\sum_{i=1}^{5} (m_i-m_{\tau(i)})$$
+The right hand side obviously equals $0$ and so we easily get $h_{n1}+h_{n2}+h_{n3}=0$. And that completes the proof of Lemma 8.4.
 
 \textbf{Case 1:} $\tau_1=(2,4,1,5,3)$
-Step 1: First we set $m_1=m_{\tau_1(3)}$ and $m_2=m_{\tau_1(1)}$. Then we solve for $\lamda$ and $\lambda_\tau_1$ by using the equations from above. This gives the following results:
-$$\lambda=\frac{f_1g_3-f_1g_1+f_3g_2-f_3g_1}{{f_1}^2-f_2f_3}$$
-$$\lambda_{\tau_1}=\frac{f_2g_3-f_2g_1+f_1g_2-f_1g_1}{{f_1}^2-f_2f_3}$$
+
+Step 1: First we set $m_1=m_{\tau_1(3)}$ and $m_2=m_{\tau_1(1)}$. Then we solve for $\lambda$ and $\lambda_\tau_1$ by using the equations from above. This gives the following results:
+$$\lambda=\frac{f_1g_3-f_1g_1+f_3g_2-f_3g_1}{{f_1}^2-f_2f_3}M$$
+$$\lambda_{\tau_1}=\frac{f_2g_3-f_2g_1+f_1g_2-f_1g_1}{{f_1}^2-f_2f_3}M$$
 
 Step 2: Substituting these $\lambda$ and $\lambda_\tau$ back into the original equations, then we get:
 $$m_1=M\frac{{f_1}^2g_3-{f_1}^2g_1+f_1f_3g_2-f_1f_3g_1+{f_1}^2g_1-f_2f_3g_1}{{f_1}^2-f_2f_3}$$
@@ -627,8 +681,56 @@ We have from direct computation and using the fact that $f_1+f_2+f_3+f_4+f_5=0$ 
 
 \textbf{Case 2:} $\tau_2=(2,5,1,3,4)$
 
+Step 1: First we set $m_1=m_{\tau_2(3)}$ and $m_2=m_{\tau_2(1)}$. Then we solve for $\lambda$ and $\lambda_{\tau_2}$. Obviously this gives the same $\lambda$ as before and $\lambda_{\tau_1}=\lambda_{\tau_2}$. This will be true for each pair of permutations. i.e. $1$ and $2$, $3$ and $4$ etc.
+$$\lambda=\frac{f_1g_3-f_1g_1+f_3g_2-f_3g_1}{{f_1}^2-f_2f_3}M$$
+$$\lambda_{\tau_2}=\frac{f_2g_3-f_2g_1+f_1g_2-f_1g_1}{{f_1}^2-f_2f_3}M$$
+
+Step 2: Substituting these into the equations for mass before and after the rearrangement we will get $m_3-m_{\tau_2(4)}=\frac{h_{21}M}{{f_1}^2-f_2f_3}$, $m_4-m_{\tau_2(5)}=\frac{h_{22}M}{{f_1}^2-f_2f_3}$, and $m_5-m_{\tau_2(2)}=\frac{h_{23}M}{{f_1}^2-f_2f_3}$.
+
+\textbf{Case 3:} $\tau_3=(2,5,4,1,3)$
+
+Step 1: First we set $m_1=m_{\tau_3(4)}$ and $m_2=m_{\tau_3(1)}$. Then we solve for $\lambda$ and $\lambda_{\tau_3}$. 
+$$\lambda=\frac{f_1g_4-f_1g_1+f_4g_2-f_4g_1}{{f_1}^2-f_2f_4}M$$
+$$\lambda_{\tau_3}=\frac{f_1g_2-f_1g_1+f_2g_4-f_2g_1}{{f_1}^2-f_2f_4}M$$
+
+Step 2: Substituting these into the equations for mass before and after the rearrangement we will get $m_3-m_{\tau_3(5)}=\frac{h_{31}M}{{f_1}^2-f_2f_4}$, $m_4-m_{\tau_3(3)}=\frac{h_{32}M}{{f_1}^2-f_2f_4}$, and $m_5-m_{\tau_3(2)}=\frac{h_{33}M}{{f_1}^2-f_2f_4}$.
+
+\textbf{Case 4:} $\tau_4=(2,3,5,1,4)$
+
+Step 1: First we set $m_1=m_{\tau_4(4)}$ and $m_2=m_{\tau_4(1)}$. Then we solve for $\lambda$ and $\lambda_{\tau_4}$. 
+$$\lambda=\frac{f_1g_4-f_1g_1+f_4g_2-f_4g_1}{{f_1}^2-f_2f_4}M$$
+$$\lambda_{\tau_4}=\frac{f_1g_2-f_1g_1+f_2g_4-f_2g_1}{{f_1}^2-f_2f_4}M$$
+
+Step 2: Substituting these into the equations for mass before and after the rearrangement we will get $m_3-m_{\tau_4(2)}=\frac{h_{41}M}{{f_1}^2-f_2f_4}$, $m_4-m_{\tau_4(5)}=\frac{h_{42}M}{{f_1}^2-f_2f_4}$, and $m_5-m_{\tau_4(3)}=\frac{h_{43}M}{{f_1}^2-f_2f_4}$.
+
+\textbf{Case 5:} $\tau_5=(2,3,4,5,1)$
+
+Step 1: First we set $m_1=m_{\tau_5(5)}$ and $m_2=m_{\tau_5(1)}$. Then we solve for $\lambda$ and $\lambda_{\tau_5}$. 
+$$\lambda=\frac{f_1g_5-f_1g_1+f_5g_2-f_5g_1}{{f_1}^2-f_2f_5}M$$
+$$\lambda_{\tau_5}=\frac{f_1g_2-f_1g_1+f_2g_5-f_2g_1}{{f_1}^2-f_2f_5}M$$
+
+Step 2: Substituting these into the equations for mass before and after the rearrangement we will get $m_3-m_{\tau_5(2)}=\frac{h_{51}M}{{f_1}^2-f_2f_5}$, $m_4-m_{\tau_5(3)}=\frac{h_{52}M}{{f_1}^2-f_2f_5}$, and $m_5-m_{\tau_5(4)}=\frac{h_{53}M}{{f_1}^2-f_2f_5}$.
+
+\textbf{Case 6:} $\tau_6=(2,4,5,3,1)$
+
+Step 1: First we set $m_1=m_{\tau_6(5)}$ and $m_2=m_{\tau_6(1)}$. Then we solve for $\lambda$ and $\lambda_{\tau_6}$. 
+$$\lambda=\frac{f_1g_5-f_1g_1+f_5g_2-f_5g_1}{{f_1}^2-f_2f_5}M$$
+$$\lambda_{\tau_6}=\frac{f_1g_2-f_1g_1+f_2g_5-f_2g_1}{{f_1}^2-f_2f_5}M$$
+
+Step 2: Substituting these into the equations for mass before and after the rearrangement we will get $m_3-m_{\tau_6(4)}=\frac{h_{61}M}{{f_1}^2-f_2f_5}$, $m_4-m_{\tau_6(2)}=\frac{h_{62}M}{{f_1}^2-f_2f_5}$, and $m_5-m_{\tau_6(3)}=\frac{h_{63}M}{{f_1}^2-f_2f_5}$.
+
+\textbf{Case 7:} $\tau_7=(3,1,4,5,2)$
+$\tau_7$ is the inverse of $\tau_2$. This means that any $q$ that works for $\tau_2$ will also work for $\tau_7$ when the values of $\lambda$ and $\lambda_\tau$ are switched.
+$$\lambda=\frac{f_2g_3-f_2g_1+f_1g_2-f_1g_1}{{f_1}^2-f_2f_3}M$$
+$$\lambda_{\tau_7}=\frac{f_1g_3-f_1g_1+f_3g_2-f_3g_1}{{f_1}^2-f_2f_3}M$$
+
+\textbf{Case 8:} $\tau_8=(3,1,5,2,4)$
+$\tau_8$ is the inverse of $\tau_1$. This means that any $q$ that works for $\tau_1$ will also work for $\tau_8$ when the values of $\lambda$ and $\lambda_\tau$ are switched.
+$$\lambda=\frac{f_2g_3-f_2g_1+f_1g_2-f_1g_1}{{f_1}^2-f_2f_3}M$$
+$$\lambda_{\tau_8}=\frac{f_1g_3-f_1g_1+f_3g_2-f_3g_1}{{f_1}^2-f_2f_3}M$$
 
 \section*{Acknowledgment}
+
 
 %The author would like to thank Dr. Chi-Kwong Li for some valuable discussion on the properties of Pfaffian, especially the simple proof of theorem \ref{Pf6}.
 
@@ -687,4 +789,4 @@ Astronomy 107, (2010) 353�-376.
 \bibitem{ZX6} Z. Xie, An analytical proof on certain determinants connected with the collinear central configurations in the $n$-body problem, Celestial Mechanics and Dynamical
 Astronomy 118 (2014), no. 1, 89-97.
 \end{thebibliography}
-\end{document} 
+\end{document}
